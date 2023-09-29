@@ -5,7 +5,7 @@ const siteMetadata = {
   description: 'A blog created with Next.js and Tailwind.css',
   language: 'ko-kr',
   theme: 'system', // system, dark or light
-  siteUrl: 'https://blog-tummy.vercel.app',
+  siteUrl: 'https://blog-tummy-git-main-tummys-projects.vercel.app/',
   siteRepo: 'https://github.com/letsjo/blog-tummy',
   siteLogo: '/static/images/logo.png',
   image: '/static/images/avatar.png',
