@@ -1,6 +1,6 @@
-import Script from 'next/script'
+import Script from 'next/script';
 
-import siteMetadata from '@/data/siteMetadata'
+import siteMetadata from '@/data/siteMetadata';
 
 const UmamiScript = () => {
   return (
@@ -9,10 +9,10 @@ const UmamiScript = () => {
         async
         defer
         data-website-id={siteMetadata.analytics.umamiWebsiteId}
-        src="https://umami.example.com/umami.js" // Replace with your umami instance
+        src='https://analytics.eu.umami.is/script.js' // Replace with your umami instance
       />
     </>
-  )
-}
+  );
+};
 
-export default UmamiScript
+export default UmamiScript;
