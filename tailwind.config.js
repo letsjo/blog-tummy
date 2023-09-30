@@ -56,6 +56,9 @@ module.exports = {
             'h4,h5,h6': {
               color: theme('colors.gray.900'),
             },
+            span: {
+              color: theme('colors.gray.900'),
+            },
             pre: {
               backgroundColor: theme('colors.gray.800'),
             },
@@ -128,6 +131,9 @@ module.exports = {
               color: theme('colors.gray.100'),
             },
             'h4,h5,h6': {
+              color: theme('colors.gray.100'),
+            },
+            span: {
               color: theme('colors.gray.100'),
             },
             pre: {
