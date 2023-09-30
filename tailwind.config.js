@@ -1,17 +1,11 @@
-const defaultTheme = require('tailwindcss/defaultTheme')
-const colors = require('tailwindcss/colors')
+const defaultTheme = require('tailwindcss/defaultTheme');
+const colors = require('tailwindcss/colors');
 
 module.exports = {
   experimental: {
     optimizeUniversalDefaults: true,
   },
-  content: [
-    './pages/**/*.js',
-    './components/**/*.js',
-    './layouts/**/*.js',
-    './lib/**/*.js',
-    './data/**/*.mdx',
-  ],
+  content: ['./pages/**/*.js', './components/**/*.js', './layouts/**/*.js', './lib/**/*.js', './data/**/*.mdx'],
   darkMode: 'class',
   theme: {
     extend: {
@@ -34,7 +28,10 @@ module.exports = {
       typography: (theme) => ({
         DEFAULT: {
           css: {
-            color: theme('colors.gray.100'),
+            color: theme('colors.gray.800'),
+            p: {
+              color: theme('colors.gray.800'),
+            },
             a: {
               color: theme('colors.primary.500'),
               '&:hover': {
@@ -45,26 +42,26 @@ module.exports = {
             h1: {
               fontWeight: '700',
               letterSpacing: theme('letterSpacing.tight'),
-              color: theme('colors.gray.100'),
+              color: theme('colors.gray.900'),
             },
             h2: {
               fontWeight: '700',
               letterSpacing: theme('letterSpacing.tight'),
-              color: theme('colors.gray.100'),
+              color: theme('colors.gray.900'),
             },
             h3: {
               fontWeight: '600',
-              color: theme('colors.gray.100'),
+              color: theme('colors.gray.900'),
             },
             'h4,h5,h6': {
-              color: theme('colors.gray.100'),
+              color: theme('colors.gray.900'),
             },
             pre: {
               backgroundColor: theme('colors.gray.800'),
             },
             code: {
-              color: theme('colors.gray.100'),
-              backgroundColor: theme('colors.primary.700'),
+              color: theme('colors.pink.500'),
+              backgroundColor: theme('colors.gray.100'),
               paddingLeft: '4px',
               paddingRight: '4px',
               paddingTop: '2px',
@@ -98,11 +95,17 @@ module.exports = {
               color: theme('colors.gray.900'),
               borderLeftColor: theme('colors.gray.200'),
             },
+            '[class~="box"]': {
+              backgroundColor: theme('colors.gray.200'),
+            },
           },
         },
         dark: {
           css: {
-            color: theme('colors.gray.300'),
+            color: theme('colors.gray.100'),
+            p: {
+              color: theme('colors.gray.100'),
+            },
             a: {
               color: theme('colors.primary.500'),
               '&:hover': {
@@ -159,10 +162,13 @@ module.exports = {
               color: theme('colors.gray.100'),
               borderLeftColor: theme('colors.gray.700'),
             },
+            '[class~="box"]': {
+              backgroundColor: theme('colors.gray.800'),
+            },
           },
         },
       }),
     },
   },
   plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography')],
-}
+};
