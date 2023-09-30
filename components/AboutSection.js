@@ -66,10 +66,9 @@ const AboutSection = () => {
       ref={ref}
       className='text-white'
     >
-      <div className='prose mx-auto mt-10 flex w-full max-w-3xl flex-col items-center gap-8 px-4 py-4 dark:prose-dark xl:max-w-5xl xl:flex-row xl:items-start xl:px-0 '>
-        {/* <Image className='object-contain' src='/static/images/about-image.png' width={500} height={500} alt='' /> */}
-        <Animation className='w-2/3 xl:w-1/2' animationData={imageDeveloper} />
-        <div className='mt-4 flex h-full w-full flex-col text-left md:mt-0 xl:w-1/2'>
+      <div className='prose mx-auto mt-10 flex w-full max-w-3xl flex-col items-center gap-8 px-4 py-4 dark:prose-dark md:flex-row md:items-start xl:max-w-5xl xl:items-start xl:px-0 '>
+        <Animation className='w-2/3 md:w-1/2' animationData={imageDeveloper} />
+        <div className='mt-4 flex h-full w-full flex-col text-left md:mt-0 md:w-1/2'>
           <h2 className='mt-0 mb-4 text-4xl font-bold'>About Me</h2>
           <p className='text-base lg:text-lg'>
             I am a full stack web developer with a passion for creating interactive and responsive web applications. I
