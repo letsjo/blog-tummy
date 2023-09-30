@@ -12,4 +12,4 @@ module.exports = {
   arrowParens: 'always',
   formatOnSave: true,
   htmlWhitespaceSensitivity: 'css',
-}
+};
