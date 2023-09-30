@@ -57,7 +57,7 @@ const HeroSection = () => {
         >
           <div className='box relative overflow-hidden rounded-full'>
             <Image
-              src='/static/images/Hyunoh.png'
+              src='/static/images/hyunoh.png'
               alt='hero image'
               className='absolute top-1/2 left-1/2'
               width={400}
