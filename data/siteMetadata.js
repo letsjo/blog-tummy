@@ -23,7 +23,7 @@ const siteMetadata = {
     // supports plausible, simpleAnalytics, umami or googleAnalytics
     plausibleDataDomain: 'blog-tummy.vercel.app', // e.g. tailwind-nextjs-starter-blog.vercel.app
     simpleAnalytics: false, // true or false
-    umamiWebsiteId: 'f2403d79-234f-45d9-9e7b-65eda54f125b', // e.g. 123e4567-e89b-12d3-a456-426614174000
+    umamiWebsiteId: '3503b1de-ef17-4853-9247-d8caf03cb38d', // e.g. 123e4567-e89b-12d3-a456-426614174000
     googleAnalyticsId: 'G-68X6QB3HRJ', // e.g. UA-000000-2 or G-XXXXXXX
     posthogAnalyticsId: '', // posthog.init e.g. phc_5yXvArzvRdqtZIsHkEm3Fkkhm3d0bEYUXCaFISzqPSQ
   },
