@@ -18,7 +18,7 @@ const LayoutWrapper = ({ children }) => {
                     <Logo />
                   </div> */}
                 {typeof siteMetadata.headerTitle === 'string' ? (
-                  <div className='h-6 text-2xl font-semibold'>{siteMetadata.headerTitle}</div>
+                  <div className='h-6 text-3xl font-semibold'>{siteMetadata.headerTitle}</div>
                 ) : (
                   siteMetadata.headerTitle
                 )}
@@ -43,7 +43,7 @@ const LayoutWrapper = ({ children }) => {
         </div>
       </header>
 
-      <main>{children}</main>
+      <main className='h-auto'>{children}</main>
       <Footer />
     </div>
   );
