@@ -8,6 +8,8 @@ import { getAllCategories } from '@/lib/categories';
 
 import NewsletterForm from '@/components/NewsletterForm';
 import SectionContainer from '@/components/SectionContainer';
+import HeroSection from '@/components/HeroSection';
+import AchievementsSection from '@/components/AchievementsSection';
 
 const MAX_DISPLAY = 5;
 
@@ -24,12 +26,12 @@ export default function Home({ posts, categories }) {
   return (
     <SectionContainer>
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
+      <HeroSection />
       <div className='divide-y divide-gray-200 dark:divide-gray-700'>
         <div className='space-y-2 pt-6 pb-8 md:space-y-5'>
-          <h1 className='text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14'>
+          <h1 className='text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:leading-10 md:text-4xl md:leading-14 lg:text-6xl'>
             Latest
           </h1>
-          <p className='text-lg leading-7 text-gray-500 dark:text-gray-400'>{siteMetadata.description}</p>
         </div>
         <ul className='divide-y divide-gray-200 dark:divide-gray-700'>
           {!posts.length && (
