@@ -6,39 +6,45 @@ import { motion } from 'framer-motion';
 
 const HeroSection = () => {
   return (
-    <section className='py-10'>
-      <div className='flex flex-col sm:flex-row'>
+    <section className='py-0 md:py-10'>
+      <div className='flex w-full flex-col justify-between md:flex-row'>
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
-          className='prose order-2 col-span-8 place-self-center justify-self-start text-center dark:prose-dark sm:order-1 sm:text-left'
+          className='prose order-2 col-span-8 w-full place-self-center justify-self-start text-center dark:prose-dark sm:text-left md:order-1 md:w-2/3'
         >
-          <h1 className='mb-4 text-3xl font-extrabold text-white sm:text-4xl lg:text-6xl lg:leading-normal'>
+          <h1 className='mb-4 text-center text-3xl font-extrabold text-white sm:text-4xl sm:leading-normal md:text-start lg:text-5xl lg:leading-normal xl:text-6xl xl:leading-normal'>
             <span className='bg-gradient-to-r from-primary-500 to-gray-500 bg-clip-text text-transparent dark:from-primary-400 dark:to-gray-600 dark:bg-clip-text dark:text-transparent'>
-              Hello, I&apos;m{' '}
+              안녕하세요, 저는
             </span>
-            <br></br>
+            <br />
             <TypeAnimation
               sequence={[
-                'Tummy',
-                1000,
-                'Web Developer',
+                'Hyunoh Jo',
                 1000,
                 'Frontend Developer',
+                1000,
+                'React Developer',
                 1500,
-                'used to React, Next.js',
+                'Next.js Developer',
                 1500,
               ]}
               wrapper='span'
               speed={50}
+              deletionSpeed={60}
               repeat={Infinity}
             />
+            <br />
+            <span className='bg-gradient-to-r from-primary-500 to-gray-500 bg-clip-text text-transparent dark:from-primary-400 dark:to-gray-600 dark:bg-clip-text dark:text-transparent'>
+              입니다.
+            </span>
           </h1>
-          <p className='mb-6 text-base text-gray-700 dark:text-[#ADB7BE] sm:text-lg lg:text-xl'>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.
+          <p className='mb-6 text-center text-base text-gray-700 dark:text-[#ADB7BE] sm:text-sm md:text-left lg:text-lg xl:text-xl'>
+            문제를 집요하게 몰입해 끝까지 파고드는 것을 좋아하며,
+            <br /> 스스로 성장하는 것을 즐깁니다.
           </p>
-          <div>
+          <div className='text-center md:text-left'>
             <button className='mr-4 w-full rounded-full bg-gradient-to-br from-primary-500 to-gray-500 px-6 py-3 text-white hover:bg-slate-200 sm:w-fit'>
               Hire Me
             </button>
@@ -53,7 +59,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
-          className='prose order-1 col-span-4 mt-4 mb-3 place-self-center dark:prose-dark sm:order-2 sm:mb-0 lg:mt-0'
+          className='prose order-1 col-span-4 mt-4 mb-3 w-1/3 place-self-center dark:prose-dark sm:mb-0 md:order-2 md:place-self-start lg:mt-0'
         >
           <div className='box relative overflow-hidden rounded-full'>
             <Image
