@@ -33,7 +33,11 @@ export default function Home({ posts, categories }) {
           </p>
         </div>
         <ul className="divide-y divide-gray-200 dark:divide-gray-700">
-          {!posts.length && '포스트를 찾을 수 없습니다.'}
+          {!posts.length && (
+            <div className="flex justify-center py-10 text-2xl font-semibold text-gray-500">
+              포스트를 찾을 수 없습니다.
+            </div>
+          )}
           {posts.slice(0, MAX_DISPLAY).map((frontMatter) => {
             const { slug, date, title, summary, tags } = frontMatter
             return (

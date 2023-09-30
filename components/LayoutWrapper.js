@@ -15,13 +15,11 @@ const LayoutWrapper = ({ children }) => {
           <div>
             <Link href="/" aria-label={siteMetadata.headerTitle}>
               <div className="flex items-center justify-between">
-                <div className="mr-3">
+                {/* <div className="w-8 h-8 mr-3">
                   <Logo />
-                </div>
+                </div> */}
                 {typeof siteMetadata.headerTitle === 'string' ? (
-                  <div className="hidden h-6 text-2xl font-semibold sm:block">
-                    {siteMetadata.headerTitle}
-                  </div>
+                  <div className="h-6 text-2xl font-semibold">{siteMetadata.headerTitle}</div>
                 ) : (
                   siteMetadata.headerTitle
                 )}
@@ -29,12 +27,12 @@ const LayoutWrapper = ({ children }) => {
             </Link>
           </div>
           <div className="flex items-center text-base leading-5">
-            <div className="hidden sm:block">
+            <div className="hidden md:block">
               {headerNavLinks.map((link) => (
                 <Link
                   key={link.title}
                   href={link.href}
-                  className="p-1 font-medium text-gray-900 dark:text-gray-100 sm:p-4"
+                  className="p-1 font-medium text-gray-900 dark:text-gray-100 md:p-4"
                 >
                   {link.title}
                 </Link>
@@ -46,18 +44,18 @@ const LayoutWrapper = ({ children }) => {
         </header>
         <ul className="flex hidden items-center text-base">
           {['code', 'hacking', 'tip', '3dprint', 'hardware', 'etc', 'memo'].map((cate) => (
-            <li className="hidden sm:block" key={cate}>
+            <li className="hidden md:block" key={cate}>
               <Link
-                className="inline-block rounded border border-white py-1 px-3 text-blue-500 hover:border-gray-200 hover:bg-gray-200"
+                className="inline-block rounded border border-white px-3 py-1 text-blue-500 hover:border-gray-200 hover:bg-gray-200"
                 href={`/categories/${cate}`}
               >
                 {cate}
               </Link>
             </li>
           ))}
-          <li className="hidden sm:block" key={'all'}>
+          <li className="hidden md:block" key={'all'}>
             <Link
-              className="inline-block rounded border border-blue-500 bg-blue-500 py-1 px-3 text-white"
+              className="inline-block rounded border border-blue-500 bg-blue-500 px-3 py-1 text-white"
               href="/blog"
             >
               all

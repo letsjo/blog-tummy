@@ -48,10 +48,13 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
           </div>
         </div>
         <ul>
-          {!filteredBlogPosts.length && '포스트를 찾을 수 없습니다.'}
+          {!filteredBlogPosts.length && (
+            <div className="flex justify-center py-10 text-2xl font-semibold text-gray-500">
+              포스트를 찾을 수 없습니다.
+            </div>
+          )}
           {displayPosts.map((frontMatter) => {
             const { slug, date, title, summary, tags } = frontMatter
-            console.log(frontMatter)
             return (
               <li key={slug} className="py-4">
                 <article className="space-y-2 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">

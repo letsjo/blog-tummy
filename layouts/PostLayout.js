@@ -46,30 +46,33 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
         </div>
         <div className="prose mt-8 max-w-none">{children}</div>
         <div className="mt-3 rounded-lg bg-gray-800 p-4">
-          {(next || prev) && (
-            <div className="flex justify-between py-4 xl:block xl:space-y-4 xl:py-4">
-              {prev && (
-                <div>
-                  <h2 className="text-xs uppercase tracking-wide text-gray-500 dark:text-gray-400">
-                    이전글
-                  </h2>
-                  <div className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400">
-                    <Link href={`/blog/${prev.slug}`}>{prev.title}</Link>
-                  </div>
+          <div className="flex justify-between py-4 xl:block xl:space-y-4 xl:py-4">
+            <div>
+              <h2 className="text-xs uppercase tracking-wide text-gray-500 dark:text-gray-400">
+                이전글
+              </h2>
+              {prev ? (
+                <div className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400">
+                  <Link href={`/blog/${prev.slug}`}>{prev.title}</Link>
                 </div>
-              )}
-              {next && (
-                <div>
-                  <h2 className="text-xs uppercase tracking-wide text-gray-500 dark:text-gray-400">
-                    다음글
-                  </h2>
-                  <div className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400">
-                    <Link href={`/blog/${next.slug}`}>{next.title}</Link>
-                  </div>
-                </div>
+              ) : (
+                <div className="text-gray-400">이전 글 정보가 없습니다.</div>
               )}
             </div>
-          )}
+
+            <div>
+              <h2 className="text-xs uppercase tracking-wide text-gray-500 dark:text-gray-400">
+                다음글
+              </h2>
+              {next ? (
+                <div className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400">
+                  <Link href={`/blog/${next.slug}`}>{next.title}</Link>
+                </div>
+              ) : (
+                <div className="text-gray-400">다음 글 정보가 없습니다.</div>
+              )}
+            </div>
+          </div>
         </div>
         <div className="mt-2">
           <Comments frontMatter={frontMatter} />

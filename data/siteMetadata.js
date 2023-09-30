@@ -2,10 +2,10 @@ const siteMetadata = {
   title: 'tummy.log',
   author: 'HyunohJo',
   headerTitle: 'tummy.log',
-  description: 'A blog created with Next.js and Tailwind.css',
+  description: '개발자 조현오의 블로그입니다.',
   language: 'ko-kr',
-  theme: 'system', // system, dark or light
-  siteUrl: 'https://blog-tummy-git-main-tummys-projects.vercel.app/',
+  theme: 'system',
+  siteUrl: 'https://blog-tummy.vercel.app/',
   siteRepo: 'https://github.com/letsjo/blog-tummy',
   siteLogo: '/static/images/logo.png',
   image: '/static/images/avatar.png',
@@ -23,8 +23,8 @@ const siteMetadata = {
     // supports plausible, simpleAnalytics, umami or googleAnalytics
     plausibleDataDomain: '', // e.g. tailwind-nextjs-starter-blog.vercel.app
     simpleAnalytics: false, // true or false
-    umamiWebsiteId: '', // e.g. 123e4567-e89b-12d3-a456-426614174000
-    googleAnalyticsId: '', // e.g. UA-000000-2 or G-XXXXXXX
+    umamiWebsiteId: 'f2403d79-234f-45d9-9e7b-65eda54f125b', // e.g. 123e4567-e89b-12d3-a456-426614174000
+    googleAnalyticsId: 'G-68X6QB3HRJ', // e.g. UA-000000-2 or G-XXXXXXX
     posthogAnalyticsId: '', // posthog.init e.g. phc_5yXvArzvRdqtZIsHkEm3Fkkhm3d0bEYUXCaFISzqPSQ
   },
   newsletter: {
@@ -61,7 +61,7 @@ const siteMetadata = {
       // If the theme option above is set to 'custom`
       // please provide a link below to your custom theme css file.
       // example: https://giscus.app/themes/custom_example.css
-      themeURL: '',
+      // themeURL: '',
     },
     utterancesConfig: {
       // Visit the link below, and follow the steps in the 'configuration' section
