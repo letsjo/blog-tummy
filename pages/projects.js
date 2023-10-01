@@ -46,7 +46,6 @@ export default function Projects({ projectsData }) {
     setTag(newTag);
   };
 
-  // const filteredProjects = projectsData_tmp.filter((project) => project.tag.includes(tag));
   const filteredProjects =
     tag === 'All'
       ? projectsData
