@@ -89,7 +89,9 @@ export default function Projects({ projectsData }) {
                     description={project.properties['한 줄 소개'].rich_text[0].plain_text}
                     imgUrl={project.cover.file?.url || project.cover.external.url}
                     gitUrl={project.properties['Github'].url}
-                    previewUrl={project.public_url || ''}
+                    youtubeUrl={project.properties['youtube'].url}
+                    deployUrl={project.properties['Deploy'].url}
+                    previewUrl={project.public_url || null}
                     activity={project.properties['관련 활동'].rich_text[0].plain_text}
                     start={project.properties['진행 기간'].date.start}
                     end={project.properties['진행 기간'].date.end}
