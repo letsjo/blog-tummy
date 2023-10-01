@@ -60,11 +60,11 @@ export default function Projects({ projectsData }) {
     <SectionContainer>
       <PageSEO title={`Projects - ${siteMetadata.author}`} description={siteMetadata.description} />
       <div className='divide-y divide-gray-200 dark:divide-gray-700'>
-        <div className='flex flex-row justify-between space-y-2 pt-6 md:space-y-5'>
+        <div className='flex flex-col items-center justify-between md:flex-row'>
           <h1 className='text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14'>
             Projects
           </h1>
-          <div className='flex flex-row items-center justify-center gap-2 py-6'>
+          <div className='my-6 flex flex-row items-center justify-center gap-2'>
             <ProjectTag onClick={handleTagChange} name='All' isSelected={tag === 'All'} />
             <ProjectTag onClick={handleTagChange} name='Web' isSelected={tag === 'Web'} />
             <ProjectTag onClick={handleTagChange} name='Mobile' isSelected={tag === 'Mobile'} />
