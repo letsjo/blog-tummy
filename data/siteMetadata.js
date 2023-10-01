@@ -1,8 +1,8 @@
 const siteMetadata = {
   title: 'tummy.log',
-  author: 'HyunohJo',
+  author: 'tummy',
   headerTitle: 'tummy.log',
-  description: '개발자 조현오의 블로그입니다.',
+  description: '프론트엔드 개발자 포트폴리오, 기록, 정리, 공유',
   language: 'ko-kr',
   theme: 'system',
   siteUrl: 'https://blog-tummy.vercel.app/',
