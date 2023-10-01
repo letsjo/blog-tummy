@@ -1,5 +1,4 @@
 import siteMetadata from '@/data/siteMetadata';
-// import projectsData from '@/data/projectsData';
 import { PageSEO } from '@/components/SEO';
 import SectionContainer from '@/components/SectionContainer';
 import React, { useState, useRef } from 'react';
@@ -8,63 +7,6 @@ import { motion, useInView } from 'framer-motion';
 import ProjectCard from '@/components/ProjectCard';
 import ProjectTag from '@/components/ProjectTag';
 import { DATABASE_ID, TOKEN } from 'config';
-
-const projectsData_tmp = [
-  {
-    id: 1,
-    title: 'React Portfolio Website',
-    description: 'Project 1 description',
-    image: '/static/images/projects/1.png',
-    tag: ['All', 'Web'],
-    gitUrl: '/',
-    previewUrl: '/',
-  },
-  {
-    id: 2,
-    title: 'Potography Portfolio Website',
-    description: 'Project 2 description',
-    image: '/static/images/projects/2.png',
-    tag: ['All', 'Web'],
-    gitUrl: '/',
-    previewUrl: '/',
-  },
-  {
-    id: 3,
-    title: 'E-commerce Application',
-    description: 'Project 3 description',
-    image: '/static/images/projects/3.png',
-    tag: ['All', 'Web'],
-    gitUrl: '/',
-    previewUrl: '/',
-  },
-  {
-    id: 4,
-    title: 'Food Ordering Application',
-    description: 'Project 4 description',
-    image: '/static/images/projects/4.png',
-    tag: ['All', 'Mobile'],
-    gitUrl: '/',
-    previewUrl: '/',
-  },
-  {
-    id: 5,
-    title: 'React Firebase Template',
-    description: 'Authentication and CRUD operations',
-    image: '/static/images/projects/5.png',
-    tag: ['All', 'Web'],
-    gitUrl: '/',
-    previewUrl: '/',
-  },
-  {
-    id: 6,
-    title: 'Full-stack Roadmap',
-    description: 'Project 5 description',
-    image: '/static/images/projects/6.png',
-    tag: ['All', 'Web'],
-    gitUrl: '/',
-    previewUrl: '/',
-  },
-];
 
 export async function getStaticProps() {
   const options = {
