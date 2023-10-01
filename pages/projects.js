@@ -47,7 +47,7 @@ export default function Projects({ projectsData }) {
   };
 
   const filteredProjects =
-    tag === 'All'
+    projectsData && tag === 'All'
       ? projectsData
       : projectsData.filter((project) => project.properties['tag']['multi_select'].some((item) => item.name === tag));
 
@@ -72,27 +72,28 @@ export default function Projects({ projectsData }) {
         </div>
         <div className='container py-6'>
           <ul ref={ref} className='grid gap-8 md:grid-cols-2 md:gap-12'>
-            {filteredProjects.map((project, index) => (
-              <motion.li
-                key={project.id}
-                variants={cardVariants}
-                initial='initial'
-                animate={isInView ? 'animate' : 'initial'}
-                transition={{ duration: 0.3, delay: index * 0.2 }}
-              >
-                <ProjectCard
-                  title={
-                    (project.icon.emoji ? project.icon.emoji : '') +
-                    project.properties['이름'].title.map((title) => title.plain_text).join('')
-                  }
-                  description={project.properties['한 줄 소개'].rich_text[0].plain_text}
-                  imgUrl={project.cover.file?.url || project.cover.external.url}
-                  tags={project.properties.Skills.multi_select}
-                  gitUrl={project.properties['Github'].url}
-                  previewUrl={project.public_url || ''}
-                />
-              </motion.li>
-            ))}
+            {filteredProjects &&
+              filteredProjects.map((project, index) => (
+                <motion.li
+                  key={project.id}
+                  variants={cardVariants}
+                  initial='initial'
+                  animate={isInView ? 'animate' : 'initial'}
+                  transition={{ duration: 0.3, delay: index * 0.2 }}
+                >
+                  <ProjectCard
+                    title={
+                      (project.icon.emoji ? project.icon.emoji : '') +
+                      project.properties['이름'].title.map((title) => title.plain_text).join('')
+                    }
+                    description={project.properties['한 줄 소개'].rich_text[0].plain_text}
+                    imgUrl={project.cover.file?.url || project.cover.external.url}
+                    tags={project.properties.Skills.multi_select}
+                    gitUrl={project.properties['Github'].url}
+                    previewUrl={project.public_url || ''}
+                  />
+                </motion.li>
+              ))}
           </ul>
         </div>
       </div>
