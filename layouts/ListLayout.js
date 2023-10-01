@@ -19,7 +19,7 @@ export default function ListLayout({ posts, initialDisplayPosts = [], pagination
   // If initialDisplayPosts exist, display it if no searchValue is specified
   const displayPosts = initialDisplayPosts.length > 0 && !searchValue ? initialDisplayPosts : filteredBlogPosts;
 
-  const title = category[0].toUpperCase() + category.split(' ').join('-').slice(1);
+  const title = category ? category[0].toUpperCase() + category.split(' ').join('-').slice(1) : 'all';
 
   return (
     <SectionContainer>
