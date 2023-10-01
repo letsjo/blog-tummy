@@ -170,6 +170,9 @@ module.exports = {
             },
             '[class~="box"]': {
               backgroundColor: theme('colors.gray.800'),
+              span: {
+                color: theme('colors.gray.400'),
+              },
             },
           },
         },
