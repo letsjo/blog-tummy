@@ -1,13 +1,16 @@
 import Link from '@/components/Link';
 import Tag from '@/components/Tag';
-import siteMetadata from '@/data/siteMetadata';
 import { useState } from 'react';
 import Pagination from '@/components/Pagination';
 import formatDate from '@/lib/utils/formatDate';
 import SectionContainer from '@/components/SectionContainer';
 
-export default function ListLayout({ posts, title, initialDisplayPosts = [], pagination }) {
+export default function ListLayout({ posts, initialDisplayPosts = [], pagination, category, sortedCategories }) {
   const [searchValue, setSearchValue] = useState('');
+  const isSelected = 'inline-block rounded border border-primary-500 bg-primary-500 py-1 px-3 text-white';
+  const isNotSelected =
+    'border-primary inline-block rounded border py-1 px-3 text-gray-500 hover:border-primary-500 hover:bg-primary-500';
+
   const filteredBlogPosts = posts.filter((frontMatter) => {
     const searchContent = frontMatter.title + frontMatter.summary + frontMatter.tags?.join(' ');
     return searchContent.toLowerCase().includes(searchValue.toLowerCase());
@@ -16,13 +19,31 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
   // If initialDisplayPosts exist, display it if no searchValue is specified
   const displayPosts = initialDisplayPosts.length > 0 && !searchValue ? initialDisplayPosts : filteredBlogPosts;
 
+  const title = category[0].toUpperCase() + category.split(' ').join('-').slice(1);
+
   return (
     <SectionContainer>
       <div className='divide-y divide-gray-200 dark:divide-gray-700'>
         <div className='space-y-2 pt-6 pb-8 md:space-y-5'>
           <h1 className='text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14'>
-            {title}
+            {category === 'all' ? 'Blog' : title}
           </h1>
+          {sortedCategories && category !== 'memo' && (
+            <ul className='flex items-center text-base'>
+              <li className='sm:block' key={'all'}>
+                <Link className={`${category === 'all' ? isSelected : isNotSelected}`} href='/blog'>
+                  all
+                </Link>
+              </li>
+              {sortedCategories.map((cate) => (
+                <li className='hidden sm:block' key={cate}>
+                  <Link className={`${category === cate ? isSelected : isNotSelected}`} href={`/categories/${cate}`}>
+                    {cate}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          )}
           <div className='relative max-w-lg'>
             <input
               aria-label='게시글 검색'
