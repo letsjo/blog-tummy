@@ -7,8 +7,9 @@ import React, { useState, useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import ProjectCard from '@/components/ProjectCard';
 import ProjectTag from '@/components/ProjectTag';
+import { DATABASE_ID, TOKEN } from 'config';
 
-const projectsData = [
+const projectsData_tmp = [
   {
     id: 1,
     title: 'React Portfolio Website',
@@ -65,7 +66,36 @@ const projectsData = [
   },
 ];
 
-export default function Projects() {
+export async function getStaticProps() {
+  const options = {
+    method: 'POST',
+    headers: {
+      Accept: 'application/json',
+      'Notion-Version': '2022-06-28',
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${TOKEN}`,
+    },
+    body: JSON.stringify({
+      page_size: 100,
+      sorts: [
+        {
+          property: '진행 기간',
+          direction: 'descending',
+        },
+      ],
+    }),
+  };
+
+  const response = await fetch(`https://api.notion.com/v1/databases/${DATABASE_ID}/query`, options);
+  const { results: projectsData } = await response.json();
+  return {
+    props: {
+      projectsData,
+    },
+  };
+}
+
+export default function Projects({ projectsData }) {
   const [tag, setTag] = useState('All');
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
@@ -74,7 +104,11 @@ export default function Projects() {
     setTag(newTag);
   };
 
-  const filteredProjects = projectsData.filter((project) => project.tag.includes(tag));
+  // const filteredProjects = projectsData_tmp.filter((project) => project.tag.includes(tag));
+  const filteredProjects =
+    tag === 'All'
+      ? projectsData
+      : projectsData.filter((project) => project.properties['tag']['multi_select'].some((item) => item.name === tag));
 
   const cardVariants = {
     initial: { y: 50, opacity: 0 },
@@ -106,12 +140,15 @@ export default function Projects() {
                 transition={{ duration: 0.3, delay: index * 0.2 }}
               >
                 <ProjectCard
-                  title={project.title}
-                  description={project.description}
-                  imgUrl={project.image}
-                  tags={project}
-                  gitUrl={project.gitUrl}
-                  previewUrl={project.previewUrl}
+                  title={
+                    (project.icon.emoji ? project.icon.emoji : '') +
+                    project.properties['이름'].title.map((title) => title.plain_text).join('')
+                  }
+                  description={project.properties['한 줄 소개'].rich_text[0].plain_text}
+                  imgUrl={project.cover.file?.url || project.cover.external.url}
+                  tags={project.properties.Skills.multi_select}
+                  gitUrl={project.properties['Github'].url}
+                  previewUrl={project.public_url || ''}
                 />
               </motion.li>
             ))}
