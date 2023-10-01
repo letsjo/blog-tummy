@@ -6,7 +6,7 @@ const TabButton = ({ active, selectTab, children }) => {
 
   const variants = {
     default: { width: 0 },
-    active: { width: 'calc(90% - 0.75rem)' },
+    active: { width: 'calc(95% - 0.75rem)' },
   };
 
   return (
