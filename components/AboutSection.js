@@ -32,7 +32,7 @@ const TAB_DATA = [
     title: 'Skills',
     id: 'skills',
     content: (
-      <ul className='flex list-none flex-wrap gap-3 pl-2 text-sm [&>li]:rounded-xl [&>li]:bg-primary-700 [&>li]:px-2 [&>li]:py-1 [&>li.backend]:bg-gray-700'>
+      <ul className='flex list-none flex-wrap gap-3 pl-2 text-sm [&>li]:rounded-xl [&>li]:bg-primary-700 [&>li]:px-2 [&>li]:py-1 [&>li]:text-white [&>li.backend]:bg-gray-700'>
         <li>React</li>
         <li>Next.js</li>
         <li>React-native</li>
@@ -118,8 +118,8 @@ const AboutSection = () => {
       ref={ref}
       className='text-white'
     >
-      <div className='prose mx-auto mt-10 flex w-full max-w-3xl flex-col items-center gap-8 px-4 py-4 dark:prose-dark md:flex-row md:items-start xl:max-w-5xl xl:items-start xl:px-0 '>
-        <Animation className='w-2/3 md:w-1/2' animationData={imageDeveloper} />
+      <div className='prose mx-auto flex w-full max-w-3xl flex-col items-center gap-8 px-4 py-4 dark:prose-dark md:flex-row md:items-start xl:max-w-5xl xl:items-start xl:px-0 '>
+        <Animation className='hidden w-1/2 md:block' animationData={imageDeveloper} />
         <div className='mt-4 flex h-full w-full flex-col text-left md:mt-0 md:w-1/2'>
           <div className='mt-8 flex flex-row items-start justify-start text-sm md:text-lg '>
             <TabButton selectTab={() => handleTabChange('profile')} active={tab === 'profile'}>
