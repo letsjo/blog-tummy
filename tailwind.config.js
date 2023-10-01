@@ -29,6 +29,12 @@ module.exports = {
         DEFAULT: {
           css: {
             color: theme('colors.gray.800'),
+            ul: {
+              color: theme('colors.gray.800'),
+              'li::marker': {
+                color: theme('colors.gray.800'),
+              },
+            },
             p: {
               color: theme('colors.gray.800'),
             },
@@ -60,6 +66,9 @@ module.exports = {
               color: theme('colors.gray.900'),
             },
             pre: {
+              span: {
+                color: theme('colors.gray.100'),
+              },
               backgroundColor: theme('colors.gray.800'),
             },
             code: {
@@ -137,6 +146,7 @@ module.exports = {
               color: theme('colors.gray.100'),
             },
             pre: {
+              color: theme('colors.gray.100'),
               backgroundColor: theme('colors.gray.800'),
             },
             code: {

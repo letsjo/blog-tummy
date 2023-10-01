@@ -25,12 +25,14 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
       <article className='prose flex max-w-none flex-col pt-6 dark:prose-dark'>
         <h1 className='mb-4 text-3xl font-bold md:text-5xl '>{title}</h1>
         <div className=' border-muted border-b-[1px] pb-4 '>
-          <div className='mt-2 flex flex-col items-start justify-between md:flex-row md:items-center'>
+          <div className='mt-0 flex flex-col items-start justify-between md:flex-row md:items-center'>
             <div className='flex items-center'>
-              <p className='text-subtle'>{new Date(date).toLocaleDateString(siteMetadata.locale, postDateTemplate)}</p>
+              <p className='text-subtle m-0'>
+                {new Date(date).toLocaleDateString(siteMetadata.locale, postDateTemplate)}
+              </p>
             </div>
           </div>
-          <div className='mt-4 flex flex-wrap gap-3'>
+          <div className='mt-2 flex flex-wrap gap-3'>
             {tags?.map((tag) => (
               <Tag key={tag} text={tag} />
             ))}
