@@ -15,9 +15,9 @@ const ProjectCard = ({
   end,
 }) => {
   return (
-    <div className='prose flex h-full flex-col dark:prose-dark'>
+    <div className='group prose flex h-full flex-col dark:prose-dark'>
       <div
-        className='group relative h-52 rounded-t-xl md:h-72'
+        className='relative h-52 rounded-t-xl md:h-72'
         style={{ background: `url(${imgUrl})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
       >
         <div className='overlay absolute top-0 left-0 hidden h-full w-full items-center justify-center bg-[#181818] bg-opacity-0 transition-all duration-500 group-hover:flex group-hover:bg-opacity-80'>
