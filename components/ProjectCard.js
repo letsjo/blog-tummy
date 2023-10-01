@@ -2,7 +2,7 @@ import React from 'react';
 import { CodeBracketIcon, EyeIcon } from '@heroicons/react/24/outline';
 import Link from './Link';
 
-const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl }) => {
+const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl, activity, start, end }) => {
   return (
     <div className='prose flex h-full flex-col dark:prose-dark'>
       <div
@@ -25,8 +25,13 @@ const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl }) => {
         </div>
       </div>
       <div className='box flex-auto rounded-b-xl py-4 px-4'>
-        <h5 className='mb-2 text-xl font-semibold'>{title}</h5>
-        <span>{description}</span>
+        <h5 className='mb-2 text-xl font-semibold tracking-wide'>{title}</h5>
+        <p className='my-0 tracking-tight'>{description}</p>
+        <span className='text-sm tracking-tighter'>{activity}</span>
+        <br />
+        <span className='text-sm tracking-tighter'>
+          {start} ~ {end}
+        </span>
       </div>
     </div>
   );
