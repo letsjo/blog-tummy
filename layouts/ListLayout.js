@@ -7,9 +7,9 @@ import SectionContainer from '@/components/SectionContainer';
 
 export default function ListLayout({ posts, initialDisplayPosts = [], pagination, category, sortedCategories }) {
   const [searchValue, setSearchValue] = useState('');
-  const isSelected = 'inline-block rounded border border-primary-500 bg-primary-500 py-1 px-3 text-white';
+  const isSelected = 'inline-block bg-primary-500 py-1 px-3 text-white';
   const isNotSelected =
-    'border-primary inline-block rounded border py-1 px-3 text-gray-500 hover:border-primary-500 hover:bg-primary-500';
+    'border-primary inline-block py-1 px-3 text-gray-500 hover:text-white hover:border-primary-500 hover:bg-primary-500 ';
 
   const filteredBlogPosts = posts.filter((frontMatter) => {
     const searchContent = frontMatter.title + frontMatter.summary + frontMatter.tags?.join(' ');
@@ -29,14 +29,14 @@ export default function ListLayout({ posts, initialDisplayPosts = [], pagination
             {category === 'all' ? 'Blog' : title}
           </h1>
           {sortedCategories && category !== 'memo' && (
-            <ul className='flex items-center text-base'>
+            <ul className='flex flex-wrap items-center text-base'>
               <li className='sm:block' key={'all'}>
                 <Link className={`${category === 'all' ? isSelected : isNotSelected}`} href='/blog'>
                   all
                 </Link>
               </li>
               {sortedCategories.map((cate) => (
-                <li className='hidden sm:block' key={cate}>
+                <li className='block' key={cate}>
                   <Link className={`${category === cate ? isSelected : isNotSelected}`} href={`/categories/${cate}`}>
                     {cate}
                   </Link>
@@ -50,7 +50,7 @@ export default function ListLayout({ posts, initialDisplayPosts = [], pagination
               type='text'
               onChange={(e) => setSearchValue(e.target.value)}
               placeholder='게시글 검색'
-              className='block w-full rounded-md border border-gray-300 bg-white px-4 py-2 text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-900 dark:bg-gray-800 dark:text-gray-100'
+              className='block w-full rounded-md border border-gray-300 bg-gray-100 px-4 py-2 text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-900 dark:bg-gray-800 dark:text-gray-100'
             />
             <svg
               className='absolute right-3 top-3 h-5 w-5 text-gray-400 dark:text-gray-300'
