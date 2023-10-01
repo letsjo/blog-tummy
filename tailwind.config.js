@@ -34,6 +34,9 @@ module.exports = {
               'li::marker': {
                 color: theme('colors.gray.800'),
               },
+              li: {
+                color: theme('colors.gray.800'),
+              },
             },
             p: {
               color: theme('colors.gray.800'),
@@ -115,6 +118,15 @@ module.exports = {
         dark: {
           css: {
             color: theme('colors.gray.100'),
+            ul: {
+              color: theme('colors.gray.100'),
+              'li::marker': {
+                color: theme('colors.gray.100'),
+              },
+              li: {
+                color: theme('colors.gray.100'),
+              },
+            },
             p: {
               color: theme('colors.gray.100'),
             },
