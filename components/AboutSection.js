@@ -32,18 +32,17 @@ const TAB_DATA = [
     title: 'Skills',
     id: 'skills',
     content: (
-      <ul className='flex list-none flex-wrap gap-3 pl-2 text-sm [&>li]:rounded-xl [&>li]:bg-primary-700 [&>li]:px-2 [&>li]:py-1 [&>li]:text-white [&>li.backend]:bg-gray-700'>
+      <ul className='[&>li]:rounded-xl [&>li]:bg-primary-700 [&>li]:px-2 [&>li]:py-1 [&>li]:text-white [&>li.backend]:bg-gray-700 flex list-none flex-wrap gap-2 pl-2 text-lg'>
         <li>React</li>
         <li>Next.js</li>
         <li>React-native</li>
-        <li>React-native</li>
-        <li>JavaScript</li>
         <li>TypeScript</li>
+        <li>JavaScript</li>
+        <li className='backend'>Node.js</li>
+        <li className='backend'>Flask</li>
         <li className='backend'>Python</li>
         <li className='backend'>C</li>
         <li className='backend'>Java</li>
-        <li className='backend'>Node.js</li>
-        <li className='backend'>Flask</li>
       </ul>
     ),
   },
@@ -51,7 +50,7 @@ const TAB_DATA = [
     title: 'Education',
     id: 'education',
     content: (
-      <ul className='list-disc pl-2 [&>li>span]:text-xs'>
+      <ul className='[&>li>span]:text-xs list-disc pl-2'>
         <li>
           크래프톤(krafton) 정글 수료 <span>/ 2023.04-2023.08</span>
         </li>
@@ -74,7 +73,7 @@ const TAB_DATA = [
     title: 'Experience',
     id: 'experience',
     content: (
-      <ul className='list-disc pl-2 [&>li>span]:text-xs'>
+      <ul className='[&>li>span]:text-xs list-disc pl-2'>
         <li>
           2023 SKT Prompt-er Day Seoul 본선 진출 🤖 <span>/ 2023.09</span>
         </li>
@@ -125,14 +124,14 @@ const AboutSection = () => {
             <TabButton selectTab={() => handleTabChange('profile')} active={tab === 'profile'}>
               Profile
             </TabButton>
+            <TabButton selectTab={() => handleTabChange('skills')} active={tab === 'skills'}>
+              Skills
+            </TabButton>
             <TabButton selectTab={() => handleTabChange('education')} active={tab === 'education'}>
               Education
             </TabButton>
             <TabButton selectTab={() => handleTabChange('experience')} active={tab === 'experience'}>
               Experience
-            </TabButton>
-            <TabButton selectTab={() => handleTabChange('skills')} active={tab === 'skills'}>
-              Skills
             </TabButton>
           </div>
           <div className='mt-0'>{TAB_DATA.find((t) => t.id === tab).content}</div>
