@@ -1,6 +1,7 @@
 'use client';
 import React from 'react';
 import Image from './Image';
+import Link from './Link';
 import { TypeAnimation } from 'react-type-animation';
 import { motion } from 'framer-motion';
 
@@ -14,7 +15,7 @@ const HeroSection = () => {
           transition={{ duration: 0.5 }}
           className='prose order-2 col-span-8 w-full place-self-center justify-self-start text-center dark:prose-dark sm:text-left md:order-1 md:w-2/3'
         >
-          <h1 className='mb-4 text-center text-3xl font-extrabold text-white sm:text-4xl sm:leading-normal md:text-start lg:text-5xl lg:leading-normal xl:text-6xl xl:leading-normal'>
+          <h1 className='mb-4 text-center text-3xl font-extrabold leading-normal text-white sm:text-4xl sm:leading-normal md:text-left lg:text-5xl lg:leading-normal xl:text-6xl xl:leading-normal'>
             <span className='bg-gradient-to-r from-primary-600 to-gray-300 bg-clip-text text-transparent dark:from-primary-400 dark:to-gray-600 dark:bg-clip-text dark:text-transparent'>
               안녕하세요, 저는
             </span>
@@ -44,11 +45,19 @@ const HeroSection = () => {
             문제를 집요하게 몰입해 끝까지 파고드는 것을 좋아하며,
             <br /> 스스로 성장하는 것을 즐깁니다.
           </p>
-          <div className='text-center md:text-left'>
-            <button className='mr-4 w-full rounded-full bg-gradient-to-br from-primary-500 to-gray-300 px-6 py-3 text-white hover:brightness-90 hover:filter dark:to-gray-500 sm:w-fit'>
-              Hire Me
+          <div className='flex flex-col items-center gap-2 md:flex-row'>
+            <Link href='#contact' className='w-full md:w-fit'>
+              <button
+                href='#contact'
+                className='w-full rounded-full bg-gradient-to-br from-primary-500 to-gray-300 px-6 py-3 text-white hover:brightness-90 hover:filter dark:to-gray-500 md:w-fit'
+              >
+                Contact Me
+              </button>
+            </Link>
+            <button className='w-full rounded-full bg-gradient-to-br from-primary-500 to-gray-300 px-1 py-1 text-white hover:brightness-90 dark:to-gray-500 md:w-fit'>
+              <span className='block rounded-full bg-gray-100 px-5 py-2 dark:bg-gray-900'>Portfolio</span>
             </button>
-            <button className='mt-3 w-full rounded-full bg-gradient-to-br from-primary-500 to-gray-300 px-1 py-1 text-white hover:brightness-90 dark:to-gray-500 sm:w-fit'>
+            <button className='w-full rounded-full bg-gradient-to-br from-primary-500 to-gray-300 px-1 py-1 text-white hover:brightness-90 dark:to-gray-500 md:w-fit'>
               <span className='block rounded-full bg-gray-100 px-5 py-2 dark:bg-gray-900'>Download CV</span>
             </button>
           </div>
