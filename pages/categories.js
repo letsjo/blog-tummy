@@ -27,7 +27,7 @@ export default function Categories({ categories }) {
           {Object.keys(categories).length === 0 && 'No categories found.'}
           {sortedCategories.map((t) => {
             return (
-              <div key={t} className='mt-2 mb-2 mr-5'>
+              <div key={t} className='mt-2 mb-2 mr-5 flex flex-row'>
                 <Category text={t} />
                 <Link
                   href={`/categories/${kebabCase(t)}`}
