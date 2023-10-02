@@ -26,7 +26,7 @@ const siteMetadata = {
     umamiWebsiteId: '3503b1de-ef17-4853-9247-d8caf03cb38d', // e.g. 123e4567-e89b-12d3-a456-426614174000
     googleAnalyticsId: 'G-68X6QB3HRJ', // e.g. UA-000000-2 or G-XXXXXXX
     posthogAnalyticsId: '', // posthog.init e.g. phc_5yXvArzvRdqtZIsHkEm3Fkkhm3d0bEYUXCaFISzqPSQ
-    googleSiteVerification: '5uCLlkA_2H3GMQMzs9wv3tq8pmIKsRqyn4wKLEADbwM',
+    googleSiteVerification: 'dwJcnYNf90ngj3Z6g_rKhcP5xU_sEPylruUrpGhNCSw',
   },
   newsletter: {
     // supports mailchimp, buttondown, convertkit, klaviyo, revue, emailoctopus
