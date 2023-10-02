@@ -1,11 +1,11 @@
 ---
-title: 서버 사이드 렌더링(SSR) 이란?
-date: 2023-10-03
+title: '서버 사이드 렌더링(SSR) 이란?'
+date: '2023-10-03'
 categories:
-  - Study
+  - 'Study'
 tags:
-  - Web
-  - Network
+  - 'Web'
+  - 'Network'
 ---
 
 ### 서버 사이드 렌더링(SSR)

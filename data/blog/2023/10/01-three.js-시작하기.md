@@ -1,10 +1,10 @@
 ---
-title: Three.js 시작하기
-date: 2023-10-03
+title: 'Three.js 시작하기'
+date: '2023-10-03'
 categories:
-  - Study
+  - 'Study'
 tags:
-  - Threejs
+  - 'Threejs'
 ---
 
 Three.js를 알기 전에 WebGL에 대해서 먼저 알고 가야합니다.

@@ -1,11 +1,11 @@
 ---
-title: 주소창에 'naver.com'을 치면 어떤 일이 일어날까?
-date: 2023-10-03
+title: "주소창에 'naver.com'을 치면 어떤 일이 일어날까?"
+date: '2023-10-03'
 categories:
-  - Study
+  - 'Study'
 tags:
-  - Network
-  - Web
+  - 'Network'
+  - 'Web'
 ---
 
 인터넷을 하다보면, 주소창에 'naver.com'을 직접 입력하여, 접속하는 경우가 굉장히 흔한 경우이다. 이럴 경우, 네이버페이지가 바로 뜨는 것으로 보이지만, 네이버페이지를 띄우기위해 많은 과정들을 거치게 된다.

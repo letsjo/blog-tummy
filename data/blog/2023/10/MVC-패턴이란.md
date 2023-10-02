@@ -1,11 +1,11 @@
 ---
-title: MVC 패턴이란?
-date: 2023-10-03
+title: 'MVC 패턴이란?'
+date: '2023-10-03'
 categories:
-  - Study
+  - 'Study'
 tags:
-  - 디자인패턴
-  - 클린코드
+  - '디자인패턴'
+  - '클린코드'
 ---
 
 ![](https://velog.velcdn.com/images/gusdh2/post/a5951707-a0de-45b3-a453-b5c7cad73692/image.png)

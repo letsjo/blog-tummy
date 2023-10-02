@@ -1,10 +1,10 @@
 ---
-title: Three.js 기본 용어
-date: 2023-10-02
+title: 'Three.js 기본 용어'
+date: '2023-10-02'
 categories:
-  - Study
+  - 'Study'
 tags:
-  - Threejs
+  - 'Threejs'
 ---
 
 Three.js 를 들어가기 전에 익혀야할 용어들을 익혀봅시다.
