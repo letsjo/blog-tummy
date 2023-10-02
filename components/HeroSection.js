@@ -24,15 +24,16 @@ const HeroSection = () => {
               sequence={[
                 'Hyunoh Jo',
                 1000,
-                'Frontend Developer',
+                'Frontend developer',
                 1000,
-                'React Developer',
+                'React developer',
                 1500,
-                'Next.js Developer',
+                'Next.js developer',
                 1500,
               ]}
+              style={{ wordSpacing: '-0.1rem' }}
               wrapper='span'
-              speed={50}
+              speed={60}
               deletionSpeed={60}
               repeat={Infinity}
             />
@@ -47,16 +48,15 @@ const HeroSection = () => {
           </p>
           <div className='flex flex-col items-center gap-2 md:flex-row'>
             <Link href='#contact' className='w-full md:w-fit'>
-              <button
-                href='#contact'
-                className='w-full rounded-full bg-gradient-to-br from-primary-500 to-gray-300 px-6 py-3 text-white hover:brightness-90 hover:filter dark:to-gray-500 md:w-fit'
-              >
+              <button className='w-full rounded-full bg-gradient-to-br from-primary-500 to-gray-300 px-6 py-3 text-white hover:brightness-90 hover:filter dark:to-gray-500 md:w-fit'>
                 Contact Me
               </button>
             </Link>
-            <button className='w-full rounded-full bg-gradient-to-br from-primary-500 to-gray-300 px-1 py-1 text-white hover:brightness-90 dark:to-gray-500 md:w-fit'>
-              <span className='block rounded-full bg-gray-100 px-5 py-2 dark:bg-gray-900'>Portfolio</span>
-            </button>
+            <Link href='/projects' className='w-full md:w-fit'>
+              <button className='w-full rounded-full bg-gradient-to-br from-primary-500 to-gray-300 px-1 py-1 text-white hover:brightness-90 dark:to-gray-500 md:w-fit'>
+                <span className='block rounded-full bg-gray-100 px-5 py-2 dark:bg-gray-900'>Portfolio</span>
+              </button>
+            </Link>
             <button className='w-full rounded-full bg-gradient-to-br from-primary-500 to-gray-300 px-1 py-1 text-white hover:brightness-90 dark:to-gray-500 md:w-fit'>
               <span className='block rounded-full bg-gray-100 px-5 py-2 dark:bg-gray-900'>Download CV</span>
             </button>
