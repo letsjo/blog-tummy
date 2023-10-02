@@ -10,6 +10,7 @@ import NewsletterForm from '@/components/NewsletterForm';
 import SectionContainer from '@/components/SectionContainer';
 import HeroSection from '@/components/HeroSection';
 import AboutSection from '@/components/AboutSection';
+import EmailSection from '@/components/EmailSection';
 
 const MAX_DISPLAY = 5;
 
@@ -101,6 +102,7 @@ export default function Home({ posts, categories }) {
           <NewsletterForm />
         </div>
       )}
+      <EmailSection />
     </SectionContainer>
   );
 }
