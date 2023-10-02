@@ -27,6 +27,7 @@ const siteMetadata = {
     googleAnalyticsId: 'G-68X6QB3HRJ', // e.g. UA-000000-2 or G-XXXXXXX
     posthogAnalyticsId: '', // posthog.init e.g. phc_5yXvArzvRdqtZIsHkEm3Fkkhm3d0bEYUXCaFISzqPSQ
     googleSiteVerification: 'dwJcnYNf90ngj3Z6g_rKhcP5xU_sEPylruUrpGhNCSw',
+    naverSiteVerification: '280feea985784d455800c7521a597b812627504b',
   },
   newsletter: {
     // supports mailchimp, buttondown, convertkit, klaviyo, revue, emailoctopus
