@@ -13,6 +13,7 @@
     "copyimage": "node ./scripts/copyimage.mjs"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.11.0",
     "@fontsource/inter": "4.5.2",
     "@heroicons/react": "^2.0.18",
     "@mailchimp/mailchimp_marketing": "^3.0.58",
