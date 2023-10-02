@@ -87,7 +87,8 @@ export default function Projects({ projectsData }) {
                       project.properties['이름'].title.map((title) => title.plain_text).join('')
                     }
                     description={project.properties['한 줄 소개'].rich_text[0].plain_text}
-                    imgUrl={project.cover.file?.url || project.cover.external.url}
+                    // imgUrl={project.cover.file?.url || project.cover.external.url}
+                    imgUrl={project.properties['image'].url}
                     gitUrl={project.properties['Github'].url}
                     youtubeUrl={project.properties['youtube'].url}
                     deployUrl={project.properties['Deploy'].url}

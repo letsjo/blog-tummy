@@ -1,5 +1,5 @@
 import React from 'react';
-import { CodeBracketIcon, EllipsisHorizontalIcon, WindowIcon, PlayIcon } from '@heroicons/react/24/outline';
+import { CodeBracketIcon, EllipsisHorizontalIcon, WindowIcon, FilmIcon } from '@heroicons/react/24/outline';
 import Link from './Link';
 
 const ProjectCard = ({
@@ -29,20 +29,20 @@ const ProjectCard = ({
               <CodeBracketIcon className='icon absolute top-1/2 left-1/2 h-8 w-8 -translate-x-1/2 -translate-y-1/2 transform cursor-pointer text-[#ADB7BE]' />
             </Link>
           )}
-          {youtubeUrl && (
-            <Link
-              href={youtubeUrl}
-              className='relative mr-2 h-12 w-12 rounded-full border-2 border-[#ADB7BE] hover:border-white [&>.icon]:hover:text-white'
-            >
-              <PlayIcon className='icon absolute top-1/2 left-1/2 h-8 w-8 -translate-x-1/2 -translate-y-1/2 transform cursor-pointer text-[#ADB7BE]' />
-            </Link>
-          )}
           {deployUrl && (
             <Link
               href={deployUrl}
               className='relative mr-2 h-12 w-12 rounded-full border-2 border-[#ADB7BE] hover:border-white [&>.icon]:hover:text-white'
             >
               <WindowIcon className='icon absolute top-1/2 left-1/2 h-8 w-8 -translate-x-1/2 -translate-y-1/2 transform cursor-pointer text-[#ADB7BE]' />
+            </Link>
+          )}
+          {youtubeUrl && (
+            <Link
+              href={youtubeUrl}
+              className='relative mr-2 h-12 w-12 rounded-full border-2 border-[#ADB7BE] hover:border-white [&>.icon]:hover:text-white'
+            >
+              <FilmIcon className='icon absolute top-1/2 left-1/2 h-8 w-8 -translate-x-1/2 -translate-y-1/2 transform cursor-pointer text-[#ADB7BE]' />
             </Link>
           )}
           {previewUrl && (
@@ -55,7 +55,7 @@ const ProjectCard = ({
           )}
         </div>
       </div>
-      <div className='box flex-auto rounded-b-xl py-4 px-4'>
+      <div className='box flex-auto rounded-b-xl px-4 py-4'>
         <h5 className='mb-2 text-xl font-semibold tracking-wide'>{title}</h5>
         <p className='my-0 tracking-tight'>{description}</p>
         <span className='text-sm tracking-tighter'>{activity}</span>
