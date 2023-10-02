@@ -1,5 +1,5 @@
 ---
-title: three.js 시작하기
+title: Three.js 시작하기
 date: 2023-10-03
 categories:
   - Study
