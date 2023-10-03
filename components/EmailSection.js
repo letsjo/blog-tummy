@@ -34,7 +34,7 @@ const EmailSection = () => {
     <section id='contact' className='relative my-12 grid gap-4 py-24 md:my-12 md:grid-cols-2'>
       <div>
         <h5 className='my-2 text-xl font-bold'>Let&rsquo;s Connect</h5>
-        <p className='mb-4 max-w-md text-base text-[#ADB7BE] md:text-xs xl:text-lg'>
+        <p className='mb-4 max-w-md text-base md:text-xs xl:text-lg'>
           <div>새로운 기회를 찾고 있으며, 언제든 연락주셔도 됩니다.</div>
           <br />
           <div>
@@ -42,7 +42,7 @@ const EmailSection = () => {
             <p>최선을 다해 답변해 드리겠습니다!</p>
           </div>
         </p>
-        <div className='socials flex flex-row gap-2'>
+        <div className='socials flex flex-row gap-2 brightness-0 filter dark:brightness-100'>
           {siteMetadata.github && (
             <Link href={siteMetadata.github}>
               <Image src={GithubIcon} alt='Github' />
