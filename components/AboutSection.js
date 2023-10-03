@@ -32,12 +32,12 @@ const TAB_DATA = [
     title: 'Skills',
     id: 'skills',
     content: (
-      <ul className='[&>li]:rounded-xl [&>li]:bg-primary-700 [&>li]:px-2 [&>li]:py-1 [&>li]:text-white [&>li.backend]:bg-gray-700 flex list-none flex-wrap gap-2 pl-2 text-lg'>
-        <li>React</li>
-        <li>Next.js</li>
-        <li>React-native</li>
-        <li>TypeScript</li>
-        <li>JavaScript</li>
+      <ul className='tagBox flex flex-wrap gap-2'>
+        <li className='frontend'>React</li>
+        <li className='frontend'>Next.js</li>
+        <li className='frontend'>React-native</li>
+        <li className='frontend'>TypeScript</li>
+        <li className='frontend'>JavaScript</li>
         <li className='backend'>Node.js</li>
         <li className='backend'>Flask</li>
         <li className='backend'>Python</li>

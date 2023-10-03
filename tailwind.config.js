@@ -113,6 +113,30 @@ module.exports = {
             '[class~="box"]': {
               backgroundColor: theme('colors.gray.200'),
             },
+            '[class~="tagBox"]': {
+              paddingLeft: '0rem',
+              paddingTop: '1rem',
+              '[class~="frontend"]': {
+                listStyle: 'none',
+                borderRadius: '0.75rem',
+                backgroundColor: theme('colors.teal.700'),
+                paddingLeft: '0.5rem',
+                paddingRight: '0.5rem',
+                paddingTop: '0.25rem',
+                paddingBottom: '0.25rem',
+                color: theme('colors.white'),
+              },
+              '[class~="backend"]': {
+                backgroundColor: theme('colors.gray.700'),
+                listStyle: 'none',
+                borderRadius: '0.75rem',
+                paddingLeft: '0.5rem',
+                paddingRight: '0.5rem',
+                paddingTop: '0.25rem',
+                paddingBottom: '0.25rem',
+                color: theme('colors.white'),
+              },
+            },
           },
         },
         dark: {
