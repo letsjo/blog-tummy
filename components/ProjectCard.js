@@ -24,33 +24,33 @@ const ProjectCard = ({
           {gitUrl && (
             <Link
               href={gitUrl}
-              className='relative mr-2 h-12 w-12 rounded-full border-2 border-[#ADB7BE] hover:border-white [&>.icon]:hover:text-white'
+              className='group/link relative mr-2 h-12 w-12 rounded-full border-2 border-[#ADB7BE] hover:border-white'
             >
-              <CodeBracketIcon className='icon absolute top-1/2 left-1/2 h-8 w-8 -translate-x-1/2 -translate-y-1/2 transform cursor-pointer text-[#ADB7BE]' />
+              <CodeBracketIcon className='icon group-hover/link:text-white absolute top-1/2 left-1/2 h-8 w-8 -translate-x-1/2 -translate-y-1/2 transform cursor-pointer text-[#ADB7BE]' />
             </Link>
           )}
           {deployUrl && (
             <Link
               href={deployUrl}
-              className='relative mr-2 h-12 w-12 rounded-full border-2 border-[#ADB7BE] hover:border-white [&>.icon]:hover:text-white'
+              className='group/link relative mr-2 h-12 w-12 rounded-full border-2 border-[#ADB7BE] hover:border-white'
             >
-              <WindowIcon className='icon absolute top-1/2 left-1/2 h-8 w-8 -translate-x-1/2 -translate-y-1/2 transform cursor-pointer text-[#ADB7BE]' />
+              <WindowIcon className='icon group-hover/link:text-white absolute top-1/2 left-1/2 h-8 w-8 -translate-x-1/2 -translate-y-1/2 transform cursor-pointer text-[#ADB7BE]' />
             </Link>
           )}
           {youtubeUrl && (
             <Link
               href={youtubeUrl}
-              className='relative mr-2 h-12 w-12 rounded-full border-2 border-[#ADB7BE] hover:border-white [&>.icon]:hover:text-white'
+              className='group/link relative mr-2 h-12 w-12 rounded-full border-2 border-[#ADB7BE] hover:border-white'
             >
-              <FilmIcon className='icon absolute top-1/2 left-1/2 h-8 w-8 -translate-x-1/2 -translate-y-1/2 transform cursor-pointer text-[#ADB7BE]' />
+              <FilmIcon className='icon group-hover/link:text-white absolute top-1/2 left-1/2 h-8 w-8 -translate-x-1/2 -translate-y-1/2 transform cursor-pointer text-[#ADB7BE]' />
             </Link>
           )}
           {previewUrl && (
             <Link
               href={previewUrl}
-              className='relative h-12 w-12 rounded-full border-2 border-[#ADB7BE] hover:border-white [&>.icon]:hover:text-white'
+              className='group/link relative h-12 w-12 rounded-full border-2 border-[#ADB7BE] hover:border-white'
             >
-              <EllipsisHorizontalIcon className='icon absolute top-1/2 left-1/2 h-8 w-8 -translate-x-1/2 -translate-y-1/2 transform cursor-pointer text-[#ADB7BE]' />
+              <EllipsisHorizontalIcon className='icon group-hover/link:text-white absolute top-1/2 left-1/2 h-8 w-8 -translate-x-1/2 -translate-y-1/2 transform cursor-pointer text-[#ADB7BE]' />
             </Link>
           )}
         </div>
