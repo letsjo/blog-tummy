@@ -9,7 +9,7 @@ import ThemeSwitch from './ThemeSwitch';
 const LayoutWrapper = ({ children }) => {
   return (
     <div className='relative flex h-screen flex-col justify-between'>
-      <header className='fixed top-0 left-0 right-0 z-10 border-b-2 border-gray-100 bg-white bg-opacity-90 py-5 dark:border-gray-800 dark:bg-gray-900 dark:bg-opacity-90 md:py-10'>
+      <header className='fixed top-0 left-0 right-0 z-10 border-b-2 border-gray-100 bg-[#F7F6F3] bg-opacity-90 py-5 dark:border-gray-800 dark:bg-[#191919] dark:bg-opacity-90 md:py-10'>
         <div className='mx-auto flex max-w-3xl items-center justify-between px-4 sm:px-6 xl:max-w-5xl xl:px-0'>
           <div>
             <Link href='/' aria-label={siteMetadata.headerTitle}>

@@ -14,7 +14,7 @@ class MyDocument extends Document {
           <meta name='theme-color' media='(prefers-color-scheme: dark)' content='#000' />
           <link rel='alternate' type='application/rss+xml' href='/feed.xml' />
         </Head>
-        <body className='flex min-h-screen flex-col bg-white text-black antialiased dark:bg-gray-900 dark:text-white'>
+        <body className='flex min-h-screen flex-col bg-[#FBFBFA] text-black antialiased dark:bg-[#202020] dark:text-white'>
           <Main />
           <NextScript />
         </body>
