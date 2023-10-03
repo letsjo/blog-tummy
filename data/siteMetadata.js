@@ -9,7 +9,7 @@ const siteMetadata = {
   siteRepo: 'https://github.com/letsjo/blog-tummy',
   siteLogo: '/static/images/logo.png',
   image: '/static/images/avatar.png',
-  socialBanner: '/static/images/twitter-card.png',
+  mainThumbnail: '/static/images/blog_thumbnail.png',
   email: 'hyunoh.jo@gmail.com',
   github: 'https://github.com/letsjo',
   twitter: 'https://twitter.com/Twitter',

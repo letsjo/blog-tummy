@@ -32,16 +32,16 @@ const CommonSEO = ({ title, description, ogType, ogImage, twImage, canonicalUrl 
 };
 
 export const PageSEO = ({ title, description }) => {
-  const ogImageUrl = siteMetadata.siteUrl + siteMetadata.socialBanner;
-  const twImageUrl = siteMetadata.siteUrl + siteMetadata.socialBanner;
+  const ogImageUrl = siteMetadata.siteUrl + siteMetadata.mainThumbnail;
+  const twImageUrl = siteMetadata.siteUrl + siteMetadata.mainThumbnail;
   return (
     <CommonSEO title={title} description={description} ogType='website' ogImage={ogImageUrl} twImage={twImageUrl} />
   );
 };
 
 export const TagSEO = ({ title, description }) => {
-  const ogImageUrl = siteMetadata.siteUrl + siteMetadata.socialBanner;
-  const twImageUrl = siteMetadata.siteUrl + siteMetadata.socialBanner;
+  const ogImageUrl = siteMetadata.siteUrl + siteMetadata.mainThumbnail;
+  const twImageUrl = siteMetadata.siteUrl + siteMetadata.mainThumbnail;
   const router = useRouter();
   return (
     <>
@@ -62,7 +62,7 @@ export const BlogSEO = ({ authorDetails, title, summary, date, lastmod, url, ima
   const router = useRouter();
   const publishedAt = new Date(date).toISOString();
   const modifiedAt = new Date(lastmod || date).toISOString();
-  let imagesArr = images.length === 0 ? [siteMetadata.socialBanner] : typeof images === 'string' ? [images] : images;
+  let imagesArr = images.length === 0 ? [siteMetadata.mainThumbnail] : typeof images === 'string' ? [images] : images;
 
   const featuredImages = imagesArr.map((img) => {
     return {
