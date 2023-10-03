@@ -1,7 +1,7 @@
 const headerNavLinks = [
-  { href: '/blog', title: '기록하기' },
-  { href: '/tags', title: '태그' },
   { href: '/projects', title: '포트폴리오' },
+  { href: '/blog', title: '개발블로그' },
+  { href: '/tags', title: '관심키워드' },
   { href: '/categories/memo', title: '메모' },
 ];
 
