@@ -18,13 +18,13 @@ const TAB_DATA = [
     title: 'Profile',
     id: 'profile',
     content: (
-      <div className='grid grid-cols-2 gap-2 pt-5'>
-        <ProfileCard icon={<UserCircleIcon className='h-10 w-10' />} title='NAME' data='조현오' />
-        <ProfileCard icon={<CakeIcon className='h-10 w-10' />} title='BIRTH' data='91.01.04' />
-        <ProfileCard icon={<MapPinIcon className='h-10 w-10' />} title='ADDRESS' data='대구광역시' />
-        <ProfileCard icon={<PhoneIcon className='h-10 w-10' />} title='PHONE' data='010-2077-7780' />
-        <ProfileCard icon={<EnvelopeIcon className='h-10 w-10' />} title='EMAIL' data='hyunoh.jo@gmail.com' />
-        <ProfileCard icon={<BriefcaseIcon className='h-10 w-10' />} title='CARRER' data='신입' />
+      <div className='grid grid-cols-1 gap-0 pt-5'>
+        <ProfileCard icon={<UserCircleIcon className='w-10 h-10' />} title='NAME' data='조현오' />
+        <ProfileCard icon={<MapPinIcon className='w-10 h-10' />} title='ADDRESS' data='서울' />
+        <ProfileCard icon={<PhoneIcon className='w-10 h-10' />} title='PHONE' data='010-2077-7780' />
+        <ProfileCard icon={<EnvelopeIcon className='w-10 h-10' />} title='EMAIL' data='hyunoh.jo@gmail.com' />
+        {/* <ProfileCard icon={<MapPinIcon className='w-10 h-10' />} title='GITHUB' data='서울' />
+        <ProfileCard icon={<MapPinIcon className='w-10 h-10' />} title='LINKEDIN' data='서울' /> */}
       </div>
     ),
   },
@@ -117,10 +117,10 @@ const AboutSection = () => {
       ref={ref}
       className='text-white'
     >
-      <div className='prose mx-auto flex w-full max-w-3xl flex-col items-center gap-8 px-4 py-4 dark:prose-dark md:flex-row md:items-start xl:max-w-5xl xl:items-start xl:px-0 '>
+      <div className='flex flex-col items-center w-full max-w-3xl gap-8 px-4 py-4 mx-auto prose dark:prose-dark md:flex-row md:items-start xl:max-w-5xl xl:items-start xl:px-0 '>
         <Animation className='hidden w-1/2 md:block' animationData={imageDeveloper} />
-        <div className='mt-4 flex h-full w-full flex-col text-left md:mt-0 md:w-1/2'>
-          <div className='mt-8 flex flex-row items-start justify-start text-sm md:text-lg '>
+        <div className='flex flex-col w-full h-full mt-4 text-left md:mt-0 md:w-1/2'>
+          <div className='flex flex-row items-start justify-start mt-8 text-sm md:text-lg '>
             <TabButton selectTab={() => handleTabChange('profile')} active={tab === 'profile'}>
               Profile
             </TabButton>
