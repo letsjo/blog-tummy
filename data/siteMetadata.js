@@ -2,7 +2,7 @@ const siteMetadata = {
   title: 'tummy.log',
   author: 'tummy',
   headerTitle: 'tummy.log',
-  description: '프론트엔드 개발자 포트폴리오, 기록, 정리, 공유',
+  description: '프론트엔드 개발자 조현오의 포트폴리오, 기록, 정리, 공유 블로그',
   language: 'ko-kr',
   theme: 'system',
   siteUrl: 'https://blog-tummy.vercel.app/',
