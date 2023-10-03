@@ -20,7 +20,7 @@ export default function Tags({ tags }) {
       <div className='flex flex-col items-center justify-start divide-y divide-gray-200 dark:divide-gray-700 md:mt-24 md:flex-row md:items-start md:justify-start md:space-x-6 md:divide-y-0'>
         <div className='pt-6 pb-8 space-x-2 md:space-y-5'>
           <h1 className='text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:border-r-2 md:px-6 md:text-6xl md:leading-14'>
-            관심키워드
+            Keywords
           </h1>
         </div>
         <div className='flex flex-wrap justify-start w-full'>
