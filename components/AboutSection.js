@@ -21,10 +21,8 @@ const TAB_DATA = [
       <div className='grid grid-cols-1 gap-0 pt-5'>
         <ProfileCard icon={<UserCircleIcon className='w-10 h-10' />} title='NAME' data='조현오' />
         <ProfileCard icon={<MapPinIcon className='w-10 h-10' />} title='ADDRESS' data='서울' />
-        <ProfileCard icon={<PhoneIcon className='w-10 h-10' />} title='PHONE' data='010-2077-7780' />
+        <ProfileCard icon={<PhoneIcon className='w-10 h-10' />} title='KAKAOTALK' data='010-2077-7780' />
         <ProfileCard icon={<EnvelopeIcon className='w-10 h-10' />} title='EMAIL' data='hyunoh.jo@gmail.com' />
-        {/* <ProfileCard icon={<MapPinIcon className='w-10 h-10' />} title='GITHUB' data='서울' />
-        <ProfileCard icon={<MapPinIcon className='w-10 h-10' />} title='LINKEDIN' data='서울' /> */}
       </div>
     ),
   },
