@@ -31,10 +31,10 @@ const EmailSection = () => {
   };
 
   return (
-    <section id='contact' className='relative my-12 grid gap-4 py-24 md:my-12 md:grid-cols-2'>
+    <section id='contact' className='relative grid gap-4 py-0 my-0 md:my-12 md:grid-cols-2'>
       <div>
         <h5 className='my-2 text-xl font-bold'>Let&rsquo;s Connect</h5>
-        <p className='mb-4 max-w-md text-base md:text-xs xl:text-lg'>
+        <p className='max-w-md mb-4 text-base md:text-xs xl:text-lg'>
           <div>새로운 기회를 찾고 있으며, 언제든 연락주셔도 됩니다.</div>
           <br />
           <div>
@@ -57,11 +57,11 @@ const EmailSection = () => {
       </div>
       <div>
         {emailSubmitted ? (
-          <p className='mt-2 flex flex-col text-xl'>
+          <p className='flex flex-col mt-2 text-xl'>
             {result}
             <button
               onClick={() => setEmailSubmitted(false)}
-              className='mt-5 rounded-full bg-gradient-to-br from-primary-500 to-gray-300 px-1 py-1 text-white hover:brightness-90 dark:to-gray-500'
+              className='px-1 py-1 mt-5 text-white rounded-full bg-gradient-to-br from-primary-500 to-gray-300 hover:brightness-90 dark:to-gray-500'
             >
               재 전송하기
             </button>
@@ -69,7 +69,7 @@ const EmailSection = () => {
         ) : (
           <form className='flex flex-col' ref={form} onSubmit={handleSubmit}>
             <div className='mb-6'>
-              <label htmlFor='email' className='mb-2 block text-sm font-medium'>
+              <label htmlFor='email' className='block mb-2 text-sm font-medium'>
                 Your email
               </label>
               <input
@@ -82,7 +82,7 @@ const EmailSection = () => {
               />
             </div>
             <div className='mb-6'>
-              <label htmlFor='subject' className='mb-2 block text-sm font-medium'>
+              <label htmlFor='subject' className='block mb-2 text-sm font-medium'>
                 Your name
               </label>
               <input
@@ -95,7 +95,7 @@ const EmailSection = () => {
               />
             </div>
             <div className='mb-6'>
-              <label htmlFor='message' className='mb-2 block text-sm font-medium'>
+              <label htmlFor='message' className='block mb-2 text-sm font-medium'>
                 Message
               </label>
               <textarea
