@@ -2,7 +2,7 @@
 title: '[항해 2주차] 회고록 (feat. 자바스크립트 ES)'
 date: 2022-07-03
 categories:
-  - WIL
+  - Weekly Learn
 tags:
   - 항해99
 ---

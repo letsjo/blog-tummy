@@ -2,7 +2,7 @@
 title: '[항해 5주차] 회고록 WIL (axios)'
 date: 2022-07-24
 categories:
-  - WIL
+  - Weekly Learn
 tags:
   - 항해99
 ---

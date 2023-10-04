@@ -2,7 +2,7 @@
 title: '[항해 3주차] 회고록 Serverless와 DOM'
 date: 2022-07-10
 categories:
-  - WIL
+  - Weekly Learn
 tags:
   - 항해99
 ---

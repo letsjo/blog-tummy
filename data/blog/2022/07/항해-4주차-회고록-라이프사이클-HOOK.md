@@ -2,7 +2,7 @@
 title: '[항해 4주차] 회고록 (라이프사이클/HOOK)'
 date: 2022-07-17
 categories:
-  - WIL
+  - Weekly Learn
 tags:
   - 항해99
 ---
