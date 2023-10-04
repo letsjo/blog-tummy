@@ -156,7 +156,7 @@ document.body.appendChild(header);
 
 ![](https://velog.velcdn.com/images/gusdh2/post/13a505e1-c190-4e40-8e31-d9f0327a6ee6/image.png)
 
-아래는 JavaScript를 추가한 코드입니다. (여기서는 `<script>`태그의 위치가 <body>태그보다 위이기 때문에 onload 메소드를 사용하지 않으면 에러가 나기 때문에 사용하고 있습니다.))
+아래는 JavaScript를 추가한 코드입니다. (여기서는 `<script>`태그의 위치가 `<body>` 태그보다 위이기 때문에 onload 메소드를 사용하지 않으면 에러가 나기 때문에 사용하고 있습니다.))
 
 ```js
 
