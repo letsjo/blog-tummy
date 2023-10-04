@@ -71,7 +71,7 @@ useState나 useEffect 등 익숙치 않은 문법에 많이 어색하기도 했�
 
 ## DOM 이란 무엇일까?
 
-우선 DOM은 Document Object Model의 약자입니다. 그럼 문서 객체란 것이 무엇일까요? 문서 객체란 <html>이나 <body> 같은 html문서의 태그들을 JavaScript가 이용할 수 있는 객체(object)로 만들면 그것을 문서 객체라고 합니다.
+우선 DOM은 Document Object Model의 약자입니다. 그럼 문서 객체란 것이 무엇일까요? 문서 객체란 `<html>`이나 `<body>` 같은 html문서의 태그들을 JavaScript가 이용할 수 있는 객체(object)로 만들면 그것을 문서 객체라고 합니다.
 
 그럼 html문서의 태그들이 객체에 담긴 상태를 의미하는 것일까요? 여기에 Model이란 어휘도 붙었는데 Model이라는 영어 단어에는 모형, 주형이라는 의미도 있고 모듈이라는 의미도 있습니다. 비슷하게 여기서는 문서 객체를 '인식하는 방식'이라고 해석할 수 있습니다.
 
