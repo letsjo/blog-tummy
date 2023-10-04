@@ -34,8 +34,6 @@ export default function ListLayout({
 
   const title = category ? category[0].toUpperCase() + category.split(' ').join('-').slice(1) : 'all';
 
-  console.log(category);
-
   return (
     <SectionContainer>
       <div className='divide-y divide-gray-200 dark:divide-gray-700'>
