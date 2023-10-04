@@ -22,17 +22,17 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
     <SectionContainer>
       <BlogSEO url={`${siteMetadata.siteUrl}/blog/${slug}`} authorDetails={authorDetails} {...frontMatter} />
       <ScrollTopAndComment />
-      <article className='prose flex max-w-none flex-col pt-6 dark:prose-dark'>
-        <h1 className='mb-4 text-3xl font-bold md:text-5xl '>{title}</h1>
+      <article className='flex flex-col pt-6 prose max-w-none dark:prose-dark'>
+        <h1 className='mb-4 text-3xl font-bold md:text-5xl md:leading-[4rem]'>{title}</h1>
         <div className=' border-muted border-b-[1px] pb-4 '>
-          <div className='mt-0 flex flex-col items-start justify-between md:flex-row md:items-center'>
+          <div className='flex flex-col items-start justify-between mt-0 md:flex-row md:items-center'>
             <div className='flex items-center'>
               <p className='text-subtle m-0'>
                 {new Date(date).toLocaleDateString(siteMetadata.locale, postDateTemplate)}
               </p>
             </div>
           </div>
-          <div className='mt-2 flex flex-wrap gap-3'>
+          <div className='flex flex-wrap gap-3 mt-2'>
             {tags?.map((tag) => (
               <Tag key={tag} text={tag} />
             ))}
@@ -40,11 +40,11 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
         </div>
         <div className='mt-8 max-w-none'>{children}</div>
         {(prev || next) && (
-          <div className='box rounded-lg p-4 '>
+          <div className='box p-4 rounded-lg '>
             <div className='flex flex-row'>
               {prev ? (
                 <div className='w-1/2'>
-                  <h2 className='text-xs uppercase tracking-wide text-gray-500 dark:text-gray-400'>이전글</h2>
+                  <h2 className='text-xs tracking-wide text-gray-500 uppercase dark:text-gray-400'>이전글</h2>
                   <div className='text-primary-500 hover:text-primary-600 dark:hover:text-primary-400'>
                     <Link href={`/blog/${prev.slug}`}>{prev.title}</Link>
                   </div>
@@ -54,7 +54,7 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
               )}
               {next ? (
                 <div className='w-1/2 text-right'>
-                  <h2 className='text-xs uppercase tracking-wide text-gray-500 dark:text-gray-400'>다음글</h2>
+                  <h2 className='text-xs tracking-wide text-gray-500 uppercase dark:text-gray-400'>다음글</h2>
                   <div className='text-primary-500 hover:text-primary-600 dark:hover:text-primary-400'>
                     <Link href={`/blog/${next.slug}`}>{next.title}</Link>
                   </div>
