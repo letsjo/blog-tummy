@@ -35,11 +35,10 @@ const EmailSection = () => {
       <div>
         <h5 className='my-2 text-xl font-bold'>Let&rsquo;s Connect</h5>
         <p className='max-w-md mb-4 text-base md:text-xs xl:text-lg'>
-          <div>새로운 기회를 찾고 있으며, 언제든 연락주셔도 됩니다.</div>
-          <br />
           <div>
-            <p>그냥 인사하고 싶으신가요? 무엇이든 괜찮습니다.</p>
-            <p>최선을 다해 답변해 드리겠습니다!</p>
+            <p>새로운 기회를 찾고 있습니다 👀</p>
+            <p>제안서📝 또는 간단한 커피챗☕좋습니다.</p>
+            <p>그냥 인사👋🏻 메세지도 좋습니다.</p>
           </div>
         </p>
         <div className='socials flex flex-row gap-2 brightness-0 filter dark:brightness-100'>
