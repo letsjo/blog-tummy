@@ -2,12 +2,9 @@ import { TagSEO } from '@/components/SEO';
 import siteMetadata from '@/data/siteMetadata';
 import ListLayout from '@/layouts/ListLayout';
 import { getAllCategories } from '@/lib/categories';
-import generateRss from '@/lib/generate-rss';
 import { getAllFilesFrontMatter } from '@/lib/mdx';
 import kebabCase from '@/lib/utils/kebabCase';
 import { useRouter } from 'next/router';
-
-const root = process.cwd();
 
 export async function getStaticPaths() {
   const categories = await getAllCategories('blog');
@@ -31,9 +28,7 @@ export async function getStaticProps({ params }) {
   const posts = allPosts.filter(
     (post) => post.draft !== true && post.categories?.map((t) => kebabCase(t)).includes(params.category),
   );
-  const tagsList = posts.flatMap((post) => post.tags).filter((v) => v !== null);
-
-  const tags = [...new Set(tagsList)];
+  const tags = [...new Set(posts.flatMap((post) => post.tags))].filter((v) => v !== null);
 
   return { props: { posts, category: params.category, sortedCategories, tags } };
 }
@@ -58,7 +53,13 @@ export default function Category({ posts, category, sortedCategories, tags }) {
   }
   return (
     <>
-      <ListLayout posts={posts} category={category} sortedCategories={sortedCategories} tags={tags} />
+      <ListLayout
+        posts={posts}
+        category={category}
+        sortedCategories={sortedCategories}
+        tags={tags}
+        selectedTag={'ALL'}
+      />
     </>
   );
 }

@@ -42,29 +42,22 @@ export default function ListLayout({
             {category === 'all' ? 'Blog' : title}
           </h1>
           {sortedCategories && category !== 'memo' && (
-            <ul className='flex flex-wrap items-center text-base'>
-              <li className='sm:block' key={'all'}>
-                <Link className={`${category === 'all' ? isSelected : isNotSelected}`} href='/blog'>
-                  all
-                </Link>
-              </li>
-              {sortedCategories.map((cate) => (
-                <li className='block' key={cate}>
-                  <Link className={`${category === cate ? isSelected : isNotSelected}`} href={`/categories/${cate}`}>
-                    {cate}
+            <>
+              <ul className='flex flex-wrap items-center text-base'>
+                <li className='sm:block' key={'all'}>
+                  <Link className={`${category === 'all' ? isSelected : isNotSelected}`} href='/blog'>
+                    all
                   </Link>
                 </li>
-              ))}
-            </ul>
-          )}
-          {tags.length > 0 && (
-            <ul className='flex flex-wrap gap-1'>
-              {tags.map((tag) => (
-                <li key={tag} className={`${tag.toUpperCase() === selectedTag ? isSelectedTags : isNotSelectedTags}`}>
-                  <TagButton text={tag} />
-                </li>
-              ))}
-            </ul>
+                {sortedCategories.map((cate) => (
+                  <li className='block' key={cate}>
+                    <Link className={`${category === cate ? isSelected : isNotSelected}`} href={`/categories/${cate}`}>
+                      {cate}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </>
           )}
           <div className='relative max-w-lg'>
             <input
@@ -90,6 +83,23 @@ export default function ListLayout({
             </svg>
           </div>
         </div>
+        {tags?.length > 0 && (
+          <>
+            <h4 className='text-base text-gray-400'>관련키워드</h4>
+            <ul className='flex flex-wrap gap-1'>
+              <li className='sm:block' key={'all'}>
+                <Link className={`${selectedTag === 'ALL' ? isSelected : isNotSelected}`} href='/blog'>
+                  all
+                </Link>
+              </li>
+              {tags.map((tag) => (
+                <li key={tag} className={`${tag.toUpperCase() === selectedTag ? isSelectedTags : isNotSelectedTags}`}>
+                  <TagButton text={tag} />
+                </li>
+              ))}
+            </ul>
+          </>
+        )}
         <ul>
           {!filteredBlogPosts.length && (
             <div className='flex justify-center py-10 text-2xl font-semibold text-gray-500'>
