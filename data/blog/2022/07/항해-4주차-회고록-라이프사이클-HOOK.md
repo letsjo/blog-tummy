@@ -81,9 +81,9 @@ useEffect(() => {}, []); // 컴포넌트가 처음 나타날때 한 번 호출
 useEffect(() => {}, [의존성1, 의존성2, ..]); // 조건부 effect 발생, 의존성 중 하나가 변경된다면 effect는 항상 재생성됩니다.
 ```
 
-useEffect안에서의 return은 정리 함수(clean-up)를 사용하기위해 쓰여집니다.
+useEffect안 에서의 return은 정리 함수(clean-up)를 사용하기 위해 쓰여집니다.
 
-메모리 누수 방지를 위해 UI에서 컴포넌트를 제거하기 전에 수행컴포넌트가 여러 번 렌더링 된다면 다음 effect가 수행되기 전에 이전 effect가 정리됩니다.
+메모리 누수 방지를 위해 UI에서 컴포넌트를 제거하기 전에 수행 컴포넌트가 여러 번 렌더링 된다면 다음 effect가 수행되기 전에 이전 effect가 정리됩니다.
 
 - `useContext` : Context API를 통해 만들어진 Context에서 제공하는 Value를 가져올 수 있다
 
@@ -91,7 +91,7 @@ useEffect안에서의 return은 정리 함수(clean-up)를 사용하기위해 �
 const value = useContext(MyContext);
 ```
 
-컴포넌트에서 가장 가까운 <MyContext.Provider>가 갱신되면 이 Hook은 그 MyContext provider에게 전달된 가장 최신의 context value를 사용하여 렌더러를 트리거 합니다.
+컴포넌트에서 가장 가까운 `<MyContext.Provider>`가 갱신되면 이 Hook은 그 MyContext provider에게 전달된 가장 최신의 context value를 사용하여 렌더러를 트리거 합니다.
 
 - `useReducer` : useState의 대체 함수로 컴포넌트 상태 업데이트 로직을 컴포넌트에서 분리시킬 수 있습니다. 컴포넌트 바깥에 로직을 작성할 수 도 있고, 심지어 다른 파일에 작성한 후 불러와서 사용할 수도 있습니다. reducer란 현재 상태와 액션 객체를 파라미터로 받아와서 새로운 상태를 반환해주는 함수 입니다.
 
