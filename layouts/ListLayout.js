@@ -33,6 +33,7 @@ export default function ListLayout({
   const displayPosts = initialDisplayPosts.length > 0 && !searchValue ? initialDisplayPosts : filteredBlogPosts;
 
   const title = category ? category[0].toUpperCase() + category.split(' ').join('-').slice(1) : 'all';
+
   return (
     <SectionContainer>
       <div className='divide-y divide-gray-200 dark:divide-gray-700'>
@@ -56,7 +57,7 @@ export default function ListLayout({
               ))}
             </ul>
           )}
-          {tags && (
+          {tags.length > 0 && (
             <ul className='flex flex-wrap gap-1'>
               {tags.map((tag) => (
                 <li key={tag} className={`${tag.toUpperCase() === selectedTag ? isSelectedTags : isNotSelectedTags}`}>
