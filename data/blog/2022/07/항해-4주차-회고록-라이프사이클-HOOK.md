@@ -1,6 +1,6 @@
 ---
 title: '[항해 4주차] 회고록 (라이프사이클/HOOK)'
-date: 2023-10-04 23:47
+date: 2022-07-17
 categories:
   - WIL
 tags:
