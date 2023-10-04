@@ -34,6 +34,8 @@ export default function ListLayout({
 
   const title = category ? category[0].toUpperCase() + category.split(' ').join('-').slice(1) : 'all';
 
+  console.log(category);
+
   return (
     <SectionContainer>
       <div className='divide-y divide-gray-200 dark:divide-gray-700'>
@@ -88,7 +90,10 @@ export default function ListLayout({
             <h4 className='text-base text-gray-400'>관련키워드</h4>
             <ul className='flex flex-wrap gap-1'>
               <li className='sm:block' key={'all'}>
-                <Link className={`${selectedTag === 'ALL' ? isSelected : isNotSelected}`} href='/blog'>
+                <Link
+                  className={`${selectedTag === 'ALL' ? isSelected : isNotSelected}`}
+                  href={category === 'all' ? '/blog' : `/categories/${category}`}
+                >
                   all
                 </Link>
               </li>
