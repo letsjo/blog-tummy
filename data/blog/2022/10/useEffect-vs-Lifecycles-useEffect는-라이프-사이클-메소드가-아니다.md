@@ -13,9 +13,9 @@ tags:
 
 과거 리액트 클래스 컴포넌트에는 `constructor`, `componentDidMount`, `componentDidUpdate`, `componentWillUnmount` 와 같이 리액트 라이프 사이클에 대응할 수 있는 각각의 메소드가 존재했다.
 
-- componentDidMount() — useEffect(…, [])
-- componentDidUpdate() — useEffect(…, [someState])
-- componentWillUnmount() — useEffect(() => { return() => .. }, [])
+- `componentDidMount() — useEffect(…, [])`
+- `componentDidUpdate() — useEffect(…, [someState])`
+- `componentWillUnmount() — useEffect(() => { return() => .. }, [])`
 
 그러나 함수형 컴포넌트의 훅으로 넘어오면서, 이러한 라이프 사이클 메소드를 훅으로 각각 대체하려고 하지만 이는 큰 실수다.
 
