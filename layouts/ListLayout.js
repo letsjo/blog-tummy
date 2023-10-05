@@ -20,9 +20,9 @@ export default function ListLayout({
   const isNotSelected =
     'border-primary inline-block py-1 px-3 text-gray-500 hover:text-white hover:border-primary-500 hover:bg-primary-500 text-lg';
 
-  const isSelectedTags = 'inline-block bg-primary-500 py-1 px-3 text-white';
+  const isSelectedTags = 'inline-block bg-primary-500 py-1 px-2 text-white';
   const isNotSelectedTags =
-    'border-primary inline-block py-1 px-3 text-gray-500 hover:text-white hover:border-primary-500 hover:bg-primary-500 ';
+    'border-primary inline-block py-1 px-2 text-gray-500 hover:text-white hover:border-primary-500 hover:bg-primary-500 ';
 
   const filteredBlogPosts = posts.filter((frontMatter) => {
     const searchContent = frontMatter.title + frontMatter.summary + frontMatter.tags?.join(' ');
@@ -82,27 +82,27 @@ export default function ListLayout({
               />
             </svg>
           </div>
-        </div>
-        {tags?.length > 0 && (
-          <>
-            <h4 className='text-base text-gray-400'>관련키워드</h4>
-            <ul className='flex flex-wrap gap-1'>
-              <li className='sm:block' key={'all'}>
-                <Link
-                  className={`${selectedTag === 'ALL' ? isSelected : isNotSelected}`}
-                  href={category === 'all' ? '/blog' : `/categories/${category}`}
-                >
-                  all
-                </Link>
-              </li>
-              {tags.map((tag) => (
-                <li key={tag} className={`${tag.toUpperCase() === selectedTag ? isSelectedTags : isNotSelectedTags}`}>
-                  <TagButton text={tag} />
+          {tags?.length > 0 && (
+            <>
+              <h4 className='text-base text-gray-400'>관련키워드</h4>
+              <ul className='flex flex-wrap gap-1'>
+                <li className='sm:block' key={'all'}>
+                  <Link
+                    className={`${selectedTag === 'ALL' ? isSelected : isNotSelected}`}
+                    href={category === 'all' ? '/blog' : `/categories/${category}`}
+                  >
+                    all
+                  </Link>
                 </li>
-              ))}
-            </ul>
-          </>
-        )}
+                {tags.map((tag) => (
+                  <li key={tag} className={`${tag.toUpperCase() === selectedTag ? isSelectedTags : isNotSelectedTags}`}>
+                    <TagButton text={tag} />
+                  </li>
+                ))}
+              </ul>
+            </>
+          )}
+        </div>
         <ul>
           {!filteredBlogPosts.length && (
             <div className='flex justify-center py-10 text-2xl font-semibold text-gray-500'>
