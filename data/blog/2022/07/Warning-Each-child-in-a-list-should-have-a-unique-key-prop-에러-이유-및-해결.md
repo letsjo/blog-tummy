@@ -2,9 +2,9 @@
 title: '[Warning: Each child in a list should have a unique "key" prop.] 에러 이유 및 해결'
 date: 2022-07-07
 categories:
-  - TroubleShooting
+  - Error
 tags:
-  - JavaScript
+  - React
 ---
 
 ### 문제점
