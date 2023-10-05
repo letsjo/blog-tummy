@@ -28,4 +28,4 @@ tags:
 
 ### Next.js & Vercel
 
-Blog는 포털 사이트(Google, naver, daum 등)에 SEO(Search Engine Optimization)가 상당히 중요한 서비스이기 때문에 SSR(Server Side Rendering) 기반
+블로그는 포털 사이트에 나의 가 SEO(Search Engine Optimization)가 상당히 중요한 서비스이기 때문에 SSR(Server Side Rendering) 기반
