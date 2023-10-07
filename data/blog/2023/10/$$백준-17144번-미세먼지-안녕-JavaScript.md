@@ -103,10 +103,12 @@ const spreadDust = () => {
 
 // 공기청정기 작동
 const operateCleaner = (cleaner) => {
-  // 상단 공기청정기 발동
+  // 상단 공기청정기 순환
   let [topCleanerX, topCleanerY] = cleaner[0];
+  // 상단 공기청정기에
   const queue = [[topCleanerX, topCleanerY + 1, board[topCleanerX][topCleanerY + 1]]];
   board[topCleanerX][topCleanerY + 1] = 0;
+  // 1방향 y축 증가시키기
   let prev = 0;
   while (queue.length > 0) {
     const [x, y, dust] = queue.shift();
@@ -127,7 +129,9 @@ const operateCleaner = (cleaner) => {
     board[nx][ny] = dust;
   }
 
+  // 하단 공기청정기 순환
   let [downCleanerX, downCleanerY] = cleaner[1];
+  // 1방향 y축 증가시키기
   prev = 0;
   const queue2 = [[downCleanerX, downCleanerY + 1, board[downCleanerX][downCleanerY + 1]]];
   board[downCleanerX][downCleanerY + 1] = 0;
