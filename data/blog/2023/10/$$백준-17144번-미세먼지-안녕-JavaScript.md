@@ -103,6 +103,7 @@ const spreadDust = () => {
 
 // 공기청정기 작동
 const operateCleaner = (cleaner) => {
+  // 상단 공기청정기 발동
   let [topCleanerX, topCleanerY] = cleaner[0];
   const queue = [[topCleanerX, topCleanerY + 1, board[topCleanerX][topCleanerY + 1]]];
   board[topCleanerX][topCleanerY + 1] = 0;
@@ -123,48 +124,36 @@ const operateCleaner = (cleaner) => {
     }
 
     queue.push([nx, ny, board[nx][ny]]);
-
     board[nx][ny] = dust;
   }
 
   let [downCleanerX, downCleanerY] = cleaner[1];
-
   prev = 0;
-
   const queue2 = [[downCleanerX, downCleanerY + 1, board[downCleanerX][downCleanerY + 1]]];
-
   board[downCleanerX][downCleanerY + 1] = 0;
 
   while (queue2.length > 0) {
     const [x, y, dust] = queue2.shift();
-
     if (x === downCleanerX && y === downCleanerY) {
       board[x][y] = -1;
-
       break;
     }
 
     const nx = x + dx[prev];
-
     const ny = y + dy[prev];
 
     if (nx < 0 || nx >= r || ny < 0 || ny >= c) {
       prev = (prev + 3) % 4;
-
       queue2.push([x, y, dust]);
-
       continue;
     }
-
     queue2.push([nx, ny, board[nx][ny]]);
-
     board[nx][ny] = dust;
   }
 };
 
 for (let i = 0; i < t; i++) {
   board = spreadDust();
-
   operateCleaner(cleaner);
 }
 
