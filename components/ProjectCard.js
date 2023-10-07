@@ -1,6 +1,7 @@
 import React from 'react';
 import { CodeBracketIcon, EllipsisHorizontalIcon, WindowIcon, FilmIcon } from '@heroicons/react/24/outline';
 import Link from './Link';
+import Tilt from 'react-tilt';
 
 const ProjectCard = ({
   imgUrl,
@@ -12,10 +13,11 @@ const ProjectCard = ({
   previewUrl,
   activity,
   start,
+  tags,
   end,
 }) => {
   return (
-    <div className='group prose flex h-full flex-col dark:prose-dark'>
+    <Tilt options={{ max: 45, scale: 1, speed: 450 }} className='group flex flex-col h-full prose dark:prose-dark'>
       <div
         className='relative h-52 rounded-t-xl md:h-72'
         style={{ background: `url(${imgUrl})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
@@ -55,7 +57,7 @@ const ProjectCard = ({
           )}
         </div>
       </div>
-      <div className='box flex-auto rounded-b-xl px-4 py-4'>
+      <div className='box flex-auto px-4 py-4 rounded-b-xl'>
         <h5 className='mb-2 text-xl font-semibold tracking-wide'>{title}</h5>
         <p className='my-0 tracking-tight'>{description}</p>
         <span className='text-sm tracking-tighter'>{activity}</span>
@@ -63,8 +65,19 @@ const ProjectCard = ({
         <span className='text-sm tracking-tighter'>
           {start} ~ {end}
         </span>
+        <div className='flex flex-wrap gap-2 mt-2'>
+          {tags.map((tag) => (
+            <h4
+              key={`${tag.id}`}
+              style={{ color: '#fff', backgroundColor: `${tag.color}`, opacity: 0.75 }}
+              className={`px-2 py-1 rounded-full text-[14px] m-0`}
+            >
+              #{tag.name}
+            </h4>
+          ))}
+        </div>
       </div>
-    </div>
+    </Tilt>
   );
 };
 
