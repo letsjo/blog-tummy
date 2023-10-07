@@ -41,16 +41,16 @@ tags:
 
 ## ✒️ 회고
 
-- **풀이 시간** : 약 1시간
+- **풀이 시간** : 약 1시간 20분
 - **틀린 횟수** : 3번
 
-BFS 를 사용해서 풀었지만, 문제를 이해하고 구현하는데 초점이 맞춰진 문제인 거 같습니다.
+BFS를 사용해서 풀었으며, 이번 문제는 공기청정기 작동 시, 바람의 방향 조절하는 부분이 까다로웠던 것 같습니다.
 
-오랜만에 코테하면서 코드도 길고, BFS를 많이 풀어봤지만 구현하는데 엄청 애먹었던 문제였습니다.
+문제의 키 포인트는 아래와 같았던 것 같습니다.
 
-특히 **[추가 조건1 : 같은 거리에 있는 승객일 때는 행 번호가 더 작은 승객을 태우고 움직이게 됩니다.]** 을 잘못 해석해서 리스트에 입력된 순서의 행을 뜻하는 줄 알고, 승객마다 번호를 매겨서 번호가 낮은 순을 우선 순으로 잡는 방법으로 풀어서 틀린 횟수도 증가하고, 시간을 많이 잡아 먹었네요.
-
-문제를 좀 더 꼼꼼하게 읽어보는 습관을 들여야 할 것 같습니다.
+- 미세 먼지가 확산될 때, 초마다 동시에 확산되는 것이기 때문에 순서대로 확산을 반영할 때 이전 확산된 내용이 반영되면 안된다.
+- 공기 흐름 방향이 상단 부분과 하단 부분이 각자의 방향을 가지고 있고, **벽을 만났을 때 바뀌는 바람의 방향이 다르다.**
+- 미세 먼지를 당기는 것이 아니라 미는 것이기 때문에 **이전 미세 먼지 기록을 기억**하고 있어야 다음 이동하는 좌표에 반영할 수 있다.
 
 ---
 
@@ -105,33 +105,37 @@ const spreadDust = () => {
 const operateCleaner = (cleaner) => {
   // 상단 공기청정기 순환
   let [topCleanerX, topCleanerY] = cleaner[0];
-  // 상단 공기청정기에
+  // 미세먼지 값을 한 칸씩 밀어 줘어야 하기 때문에 전 미세먼지 값을 2번째 인덱스에 넣어줍니다.
   const queue = [[topCleanerX, topCleanerY + 1, board[topCleanerX][topCleanerY + 1]]];
   board[topCleanerX][topCleanerY + 1] = 0;
-  // 1방향 y축 증가시키기
+  // prev = 0 : 초기 바람방향 y축 증가시키기
   let prev = 0;
   while (queue.length > 0) {
+    // 큐에 미세먼지 값을 꺼내줍니다.
     const [x, y, dust] = queue.shift();
     if (x === topCleanerX && y === topCleanerY) {
       board[x][y] = -1;
       break;
     }
-
+    // 바람의 방향을 고려해 다음 칸을 nx, ny값에 저장합니다.
     const nx = x + dx[prev];
     const ny = y + dy[prev];
+    // 만약 바람의 방향으로 다음 칸이 board 밖으로 벗어났는지를 체크합니다.
     if (nx < 0 || nx >= r || ny < 0 || ny >= c) {
+      // prev 값을 1증가시켜 바람의 방향을 변경시켜줍니다.
       prev = (prev + 1) % 4;
+      // 바람의 방향을 바꾼 값으로 다시 체크하기 위해 큐에 값을 넣어줍니다.
       queue.push([x, y, dust]);
       continue;
     }
-
+    // 현재 위치의 먼지값과 다음 좌표를 큐에 저장합니다.
     queue.push([nx, ny, board[nx][ny]]);
+    // 지도에 그 전 먼지 값을 현재 좌표에 넣어줍니다.
     board[nx][ny] = dust;
   }
 
   // 하단 공기청정기 순환
   let [downCleanerX, downCleanerY] = cleaner[1];
-  // 1방향 y축 증가시키기
   prev = 0;
   const queue2 = [[downCleanerX, downCleanerY + 1, board[downCleanerX][downCleanerY + 1]]];
   board[downCleanerX][downCleanerY + 1] = 0;
@@ -157,12 +161,15 @@ const operateCleaner = (cleaner) => {
 };
 
 for (let i = 0; i < t; i++) {
+  // 1초마다 미세먼지 확산을 반영한 board 값을 변경해줍니다.
   board = spreadDust();
+  // 이후 공기청정기 작동대로 미세먼지를 이동시켜줍니다.
   operateCleaner(cleaner);
 }
 
 let answer = 0;
 
+// 이후 공기청정기를 제외한(board[i][j] > 0) 전체 수의 합계를 answer에 더합니다.
 for (let i = 0; i < r; i++) {
   for (let j = 0; j < c; j++) {
     if (board[i][j] > 0) {
@@ -171,5 +178,6 @@ for (let i = 0; i < r; i++) {
   }
 }
 
+// answer를 출력합니다.
 console.log(answer);
 ```
