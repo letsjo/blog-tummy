@@ -46,3 +46,5 @@ console.log(a | 0);
 let a = 1.123;
 console.log(~~a);
 ```
+
+비트 연산자를 사용하게 되면,
