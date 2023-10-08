@@ -14,7 +14,7 @@ tags:
 
 [문제 링크](https://www.acmicpc.net/problem/16234)
 
-![image|200](images/Pasted%20image%2020231008163930.png)
+![](images/Pasted%20image%2020231008164626.png)
 
 ## 🎯 문제 이해하기
 
