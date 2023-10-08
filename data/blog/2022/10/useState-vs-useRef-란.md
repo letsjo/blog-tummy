@@ -5,7 +5,6 @@ categories:
   - Study
 tags:
   - React
-  - Redux
 ---
 
 ![](https://velog.velcdn.com/images/gusdh2/post/bffba945-db09-4639-b971-bc4a414fb7a2/image.png)
