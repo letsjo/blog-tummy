@@ -100,8 +100,9 @@ const getDistance = (a, b) => {
 const getCombination = (n, r) => {
   const result = [];
   const temp = [];
-  const visited = Array(n).fill(false); // 조합 구하기
+  const visited = Array(n).fill(false);
 
+  // 조합 구하기
   const combination = (count, start) => {
     if (count === r) {
       result.push([...temp]);
@@ -136,7 +137,9 @@ for (let i = 0; i < combinations.length; i++) {
     for (let k = 0; k < n; k++) {
       // 집이라면, 치킨집과의 거리를 구해서 더하기
       if (board[j][k] === 1) {
-        let min = Infinity; // 치킨집과의 거리 중에서 최솟값 구하기
+        let min = Infinity;
+
+        // 치킨집과의 거리 중에서 최솟값 구하기
         for (let l = 0; l < combination.length; l++) {
           min = Math.min(min, getDistance([j, k], chicken[combination[l]]));
         }
