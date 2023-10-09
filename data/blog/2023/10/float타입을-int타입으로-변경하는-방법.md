@@ -9,7 +9,6 @@ tags:
 
 # 목차
 
-- [What is TOC](#1-what-is-toc)
 - [Math.floor() 활용](#첫-번째-mathfloor를-활용)
 - [parseInt() 활용](<# 두 번째, `parseInt()`를 활용>)
 - [비트 OR(|) 연산자 활용](<# 세 번째,  `비트 OR(|) 연산자` 를 활용>)
@@ -19,9 +18,7 @@ tags:
 
 > `1.123 -> 1`
 
-# 1. What is TOC
-
-# 첫 번째 Mathfloor를 활용
+# 첫 번째, Math.floor를 활용
 
 ```js
 let a = 1.123;
