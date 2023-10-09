@@ -13,13 +13,12 @@ export async function getServerSideProps(context) {
   const { tag } = context.query;
   delete categories['memo'];
   const sortedCategories = Object.keys(categories).sort((a, b) => categories[b] - categories[a]);
+  const allPostsWithoutMemo = allPosts.filter((v) => v.categories?.indexOf('memo') == -1);
   const posts = tag
-    ? allPosts
-        .filter((v) => v.categories?.indexOf('memo') == -1)
-        .filter((post) => post.tags?.map((t) => kebabCase(t)).includes(tag))
-    : allPosts.filter((v) => v.categories?.indexOf('memo') == -1);
+    ? allPostsWithoutMemo.filter((post) => post.tags?.map((t) => kebabCase(t)).includes(tag))
+    : allPostsWithoutMemo;
   const initialDisplayPosts = posts.slice(0, POSTS_PER_PAGE);
-  const tags = [...new Set(posts.flatMap((post) => post.tags))].filter((v) => v !== null);
+  const tags = [...new Set(allPostsWithoutMemo.flatMap((post) => post.tags))].filter((v) => v !== null);
   const pagination = {
     currentPage: 1,
     totalPages: Math.ceil(posts.length / POSTS_PER_PAGE),
