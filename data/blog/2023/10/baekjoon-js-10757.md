@@ -2,9 +2,9 @@
 title: '[백준 10757번] 큰 수 A+B / JavaScript'
 date: 2023-10-05
 categories:
-  - Algorithm
+  - memo
 tags:
-  - basic
+  - 코딩테스트
 ---
 
 ![](https://velog.velcdn.com/images/gusdh2/post/7e3117af-14b0-45b0-ba4e-037601c9a055/image.png)

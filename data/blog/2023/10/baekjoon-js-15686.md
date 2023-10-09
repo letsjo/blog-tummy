@@ -2,10 +2,9 @@
 title: '[백준 15686번] 치킨 배달 / JavaScript'
 date: 2023-10-08
 categories:
-  - Algorithm
+  - memo
 tags:
-  - 구현
-  - 백트래킹
+  - 코딩테스트
 ---
 
 ![](https://velog.velcdn.com/images/gusdh2/post/7e3117af-14b0-45b0-ba4e-037601c9a055/image.png)
