@@ -9,7 +9,7 @@ tags:
 
 # 목차
 
-- [Math.floor() 활용](<#첫-번째,-Math.floor()를-활용>)
+- [Math.floor() 활용](<#첫-번째-mathfloor()를-활용>)
 - [parseInt() 활용](#두번째)
 - [비트 OR(|) 연산자 활용](#세번째)
 - [비트 NOT(~) 연산자 활용](#네번째)
