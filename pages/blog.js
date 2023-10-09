@@ -19,7 +19,7 @@ export async function getServerSideProps(context) {
         .filter((post) => post.tags?.map((t) => kebabCase(t)).includes(tag))
     : allPosts.filter((v) => v.categories?.indexOf('memo') == -1);
   const initialDisplayPosts = posts.slice(0, POSTS_PER_PAGE);
-  const tags = [...new Set(allPosts.flatMap((post) => post.tags))].filter((v) => v !== null);
+  const tags = [...new Set(posts.flatMap((post) => post.tags))].filter((v) => v !== null);
   const pagination = {
     currentPage: 1,
     totalPages: Math.ceil(posts.length / POSTS_PER_PAGE),

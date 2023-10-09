@@ -21,7 +21,7 @@ export async function getServerSideProps(context) {
     : allPosts.filter((v) => v.categories?.indexOf('memo') == -1);
   const pageNumber = parseInt(page);
   const initialDisplayPosts = posts.slice(POSTS_PER_PAGE * (pageNumber - 1), POSTS_PER_PAGE * pageNumber);
-  const tags = [...new Set(allPosts.flatMap((post) => post.tags))].filter((v) => v !== null);
+  const tags = [...new Set(posts.flatMap((post) => post.tags))].filter((v) => v !== null);
   const pagination = {
     currentPage: pageNumber,
     totalPages: Math.ceil(posts.length / POSTS_PER_PAGE),
