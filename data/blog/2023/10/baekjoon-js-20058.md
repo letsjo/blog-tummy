@@ -90,7 +90,7 @@ const mapSize = 2 ** N;
  * @returns {void}
  */
 const rotateIceBlock = (x, y, l) => {
-  const temp = Array.from(Array(l), () => new Array(l).fill(0)); // 아이스블록을 90도 회전시키기 // temp[0][0] => iceMap[0+2-1-0][0+0] = iceMap[1][0]; // temp[0][1] => iceMap[0+2-1-1][0+0] = iceMap[0][0]; // temp[1][0] => iceMap[0+2-1-0][0+1] = iceMap[1][1]; // temp[1][1] => iceMap[0+2-1-1][0+1] = iceMap[0][1];
+  const temp = Array.from(Array(l), () => new Array(l).fill(0));
   for (let i = 0; i < l; i += 1) {
     for (let j = 0; j < l; j += 1) {
       temp[i][j] = iceMap[y + l - 1 - j][x + i];
@@ -137,10 +137,10 @@ const meltIceBlock = () => {
 };
 
 /**
- * 아이스블록의 양을 세는 함수
+ * 연결된 아이스블록의 갯수를 세는 함수
  * @param {*} x
  * @param {*} y
- * @returns {number} 아이스블록의 양
+ * @returns {number} 연결된 아이스블록의 갯수
  */
 const bfs = (x, y) => {
   const visited = Array.from(Array(mapSize), () => new Array(mapSize).fill(false));
