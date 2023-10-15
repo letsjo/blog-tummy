@@ -4,7 +4,7 @@ date: 2023-10-15
 categories:
   - Study
 tags:
-  - Web
+  - Network
 ---
 
 ### 🌐 네트워크(Network)란?
