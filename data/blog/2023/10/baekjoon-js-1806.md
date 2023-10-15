@@ -4,7 +4,6 @@ date: 2023-10-15
 categories:
   - Coding Tests
 tags:
-  - 코딩테스트
   - 이진탐색
 ---
 
