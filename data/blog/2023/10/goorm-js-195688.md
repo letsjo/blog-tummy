@@ -4,7 +4,8 @@ date: 2023-10-13
 categories:
   - Coding Tests
 tags:
-  - 코딩테스트
+  - 1시간
+  - 완전탐색
 ---
 
 ![](images/Pasted%20image%2020231012050100.png)

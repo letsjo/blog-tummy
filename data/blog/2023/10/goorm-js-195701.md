@@ -4,7 +4,8 @@ date: 2023-10-12
 categories:
   - Coding Tests
 tags:
-  - 코딩테스트
+  - 그래프
+  - 1시간
 ---
 
 ![](images/Pasted%20image%2020231012050100.png)

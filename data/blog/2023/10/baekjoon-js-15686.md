@@ -4,7 +4,9 @@ date: 2023-10-08
 categories:
   - Coding Tests
 tags:
-  - 코딩테스트
+  - 구현
+  - 백트래킹
+  - 2시간
 ---
 
 ![](https://velog.velcdn.com/images/gusdh2/post/7e3117af-14b0-45b0-ba4e-037601c9a055/image.png)
