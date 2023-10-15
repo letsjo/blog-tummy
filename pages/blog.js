@@ -11,14 +11,14 @@ export async function getServerSideProps(context) {
   const allPosts = await getAllFilesFrontMatter('blog');
   const categories = await getAllCategories('blog');
   const { tag } = context.query;
-  delete categories['memo'];
+  delete categories['coding-tests'];
   const sortedCategories = Object.keys(categories).sort((a, b) => categories[b] - categories[a]);
-  const allPostsWithoutMemo = allPosts.filter((v) => v.categories?.indexOf('memo') == -1);
+  const allPostsWithoutCodingTest = allPosts.filter((v) => v.categories?.indexOf('coding-tests') == -1);
   const posts = tag
-    ? allPostsWithoutMemo.filter((post) => post.tags?.map((t) => kebabCase(t)).includes(tag))
-    : allPostsWithoutMemo;
+    ? allPostsWithoutCodingTest.filter((post) => post.tags?.map((t) => kebabCase(t)).includes(tag))
+    : allPostsWithoutCodingTest;
   const initialDisplayPosts = posts.slice(0, POSTS_PER_PAGE);
-  const tags = [...new Set(allPostsWithoutMemo.flatMap((post) => post.tags))].filter((v) => v !== null);
+  const tags = [...new Set(allPostsWithoutCodingTest.flatMap((post) => post.tags))].filter((v) => v !== null);
   const pagination = {
     currentPage: 1,
     totalPages: Math.ceil(posts.length / POSTS_PER_PAGE),

@@ -23,7 +23,7 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
   const allPosts = await getAllFilesFrontMatter('blog');
   const categories = await getAllCategories('blog');
-  delete categories['memo'];
+  delete categories['coding-tests'];
   const sortedCategories = Object.keys(categories).sort((a, b) => categories[b] - categories[a]);
   const posts = allPosts.filter(
     (post) => post.draft !== true && post.categories?.map((t) => kebabCase(t)).includes(params.category),

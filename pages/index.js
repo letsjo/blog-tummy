@@ -16,7 +16,7 @@ const MAX_DISPLAY = 5;
 
 export async function getStaticProps() {
   const posts = await getAllFilesFrontMatter('blog');
-  const filteredPosts = posts.filter((p) => p.categories?.indexOf('memo') == -1);
+  const filteredPosts = posts.filter((p) => p.categories?.indexOf('coding-tests') == -1);
 
   const categories = await getAllCategories('blog');
 
@@ -30,7 +30,7 @@ export default function Home({ posts, categories }) {
       <HeroSection />
       <AboutSection />
       <div className='divide-y divide-gray-200 dark:divide-gray-700'>
-        <div className='space-y-2 pt-6 pb-8 md:space-y-5'>
+        <div className='pt-6 pb-8 space-y-2 md:space-y-5'>
           <h1 className='text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:leading-10 md:text-4xl md:leading-14 lg:text-6xl'>
             Latest
           </h1>
@@ -67,7 +67,7 @@ export default function Home({ posts, categories }) {
                             ))}
                           </div>
                         </div>
-                        <div className='prose max-w-none text-gray-500 dark:text-gray-400'>{summary}</div>
+                        <div className='prose text-gray-500 max-w-none dark:text-gray-400'>{summary}</div>
                       </div>
                       <div className='text-base font-medium leading-6'>
                         <Link

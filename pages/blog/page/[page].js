@@ -12,15 +12,15 @@ export async function getServerSideProps(context) {
   } = context;
   const allPosts = await getAllFilesFrontMatter('blog');
   const categories = await getAllCategories('blog');
-  delete categories['memo'];
+  delete categories['coding-tests'];
   const sortedCategories = Object.keys(categories).sort((a, b) => categories[b] - categories[a]);
-  const allPostsWithoutMemo = allPosts.filter((v) => v.categories?.indexOf('memo') == -1);
+  const allPostsWithoutCodingTests = allPosts.filter((v) => v.categories?.indexOf('coding-tests') == -1);
   const posts = tag
-    ? allPostsWithoutMemo.filter((post) => post.tags?.map((t) => kebabCase(t)).includes(tag))
-    : allPostsWithoutMemo;
+    ? allPostsWithoutCodingTests.filter((post) => post.tags?.map((t) => kebabCase(t)).includes(tag))
+    : allPostsWithoutCodingTests;
   const pageNumber = parseInt(page);
   const initialDisplayPosts = posts.slice(POSTS_PER_PAGE * (pageNumber - 1), POSTS_PER_PAGE * pageNumber);
-  const tags = [...new Set(allPostsWithoutMemo.flatMap((post) => post.tags))].filter((v) => v !== null);
+  const tags = [...new Set(allPostsWithoutCodingTests.flatMap((post) => post.tags))].filter((v) => v !== null);
   const pagination = {
     currentPage: pageNumber,
     totalPages: Math.ceil(posts.length / POSTS_PER_PAGE),
