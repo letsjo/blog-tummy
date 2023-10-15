@@ -2,7 +2,7 @@
 title: javascript-비트마스크(Bitmask)
 date: 2023-10-11
 categories:
-  - coding-tests
+  - Coding Tests
 tags:
   - JavaScript
 ---

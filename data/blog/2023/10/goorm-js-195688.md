@@ -2,7 +2,7 @@
 title: '[구름 195688번] 문자열 나누기/ JavaScript'
 date: 2023-10-13
 categories:
-  - coding-tests
+  - Coding Tests
 tags:
   - 코딩테스트
 ---

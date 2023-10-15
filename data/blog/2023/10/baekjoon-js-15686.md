@@ -2,7 +2,7 @@
 title: '[백준 15686번] 치킨 배달 / JavaScript'
 date: 2023-10-08
 categories:
-  - coding-tests
+  - Coding Tests
 tags:
   - 코딩테스트
 ---

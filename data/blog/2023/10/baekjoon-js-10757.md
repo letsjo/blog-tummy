@@ -2,7 +2,7 @@
 title: '[백준 10757번] 큰 수 A+B / JavaScript'
 date: 2023-10-05
 categories:
-  - coding-tests
+  - Coding Tests
 tags:
   - 코딩테스트
 ---

@@ -2,7 +2,7 @@
 title: '[구름 195701번] 대체 경로 / JavaScript'
 date: 2023-10-12
 categories:
-  - coding-tests
+  - Coding Tests
 tags:
   - 코딩테스트
 ---

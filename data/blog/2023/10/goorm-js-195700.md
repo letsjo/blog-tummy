@@ -2,7 +2,7 @@
 title: '[구름 195700번] 중첩 점 / JavaScript'
 date: 2023-10-12
 categories:
-  - coding-tests
+  - Coding Tests
 tags:
   - 코딩테스트
 ---

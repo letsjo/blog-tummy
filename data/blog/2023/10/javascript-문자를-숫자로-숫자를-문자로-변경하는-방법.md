@@ -2,7 +2,7 @@
 title: '[javascript] 문자를 숫자로, 숫자를 문자로 변경하는 방법 (아스키코드)'
 date: 2023-10-09
 categories:
-  - coding-tests
+  - Coding Tests
 tags:
   - JavaScript
 ---
