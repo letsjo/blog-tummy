@@ -20,7 +20,9 @@ export async function getServerSideProps(context) {
     : allPostsWithoutCodingTests;
   const pageNumber = parseInt(page);
   const initialDisplayPosts = posts.slice(POSTS_PER_PAGE * (pageNumber - 1), POSTS_PER_PAGE * pageNumber);
-  const tags = [...new Set(allPostsWithoutCodingTests.flatMap((post) => post.tags))].filter((v) => v !== null);
+  const tags = [...new Set(allPostsWithoutCodingTests.flatMap((post) => post.tags))]
+    .filter((v) => v !== null)
+    .sort((a, b) => a.localeCompare(b));
   const pagination = {
     currentPage: pageNumber,
     totalPages: Math.ceil(posts.length / POSTS_PER_PAGE),
