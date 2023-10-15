@@ -37,7 +37,7 @@ Hello!
 
 # OT (Operational Transformation)
 
-## OT 의 작동원리
+## OT 의 작동 원리
 
 다시 Google Docs에서 **🟢Green** 과 **🟣Purple** 가 문서를 작성하려고 합니다.
 
@@ -88,7 +88,7 @@ Helo;
 
 ## CRDT 의 작동 원리
 
-**CRDT(Conflict-Free-Replicated Data Types)**는 **어떤 변경사항을 받으면, 순서와 상관없이 변경사항만 같으면 같은 상태** 입니다.
+**CRDT(Conflict-Free-Replicated Data Types)** 는 **어떤 변경사항을 받으면, 순서와 상관없이 변경사항만 같으면 같은 상태** 입니다.
 
 즉, **OT는 순서가 중요**하고, **CRDT는 순서가 상관 없고 operation만 같으면 어긋나더라도 같은 상태**가 됩니다.
 
