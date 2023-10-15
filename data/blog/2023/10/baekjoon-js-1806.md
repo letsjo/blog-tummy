@@ -2,7 +2,7 @@
 title: '[백준 1806번] 부분합 / JavaScript'
 date: 2023-10-15
 categories:
-  - memo
+  - coding-tests
 tags:
   - 코딩테스트
   - 이진탐색

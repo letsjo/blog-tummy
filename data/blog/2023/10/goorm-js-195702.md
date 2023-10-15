@@ -2,7 +2,7 @@
 title: '[구름 195702번] 연결 요소 제거하기 / JavaScript'
 date: 2023-10-12
 categories:
-  - memo
+  - coding-tests
 tags:
   - 코딩테스트
 ---

@@ -2,7 +2,7 @@
 title: '[구름 195684번] 프로젝트 매니징 / JavaScript'
 date: 2023-10-13
 categories:
-  - memo
+  - coding-tests
 tags:
   - 코딩테스트
 ---

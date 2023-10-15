@@ -2,7 +2,7 @@
 title: '[javascript] 자릿수 만큼 남는 공간 0으로 채우는 방법 (0 채우기)'
 date: 2023-10-09
 categories:
-  - memo
+  - coding-tests
 tags:
   - JavaScript
 ---

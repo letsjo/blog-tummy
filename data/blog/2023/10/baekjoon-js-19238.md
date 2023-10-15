@@ -2,7 +2,7 @@
 title: '[백준 19238번] 스타트 택시 / JavaScript'
 date: 2023-10-07
 categories:
-  - memo
+  - coding-tests
 tags:
   - 코딩테스트
 ---

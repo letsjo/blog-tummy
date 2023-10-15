@@ -2,7 +2,7 @@
 title: '[백준 17144번] 미세먼지 안녕! / JavaScript'
 date: 2023-10-07
 categories:
-  - memo
+  - coding-tests
 tags:
   - 코딩테스트
 ---

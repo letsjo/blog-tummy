@@ -2,7 +2,7 @@
 title: '[javascript] 자바스크립트의 숫자 범위 (Number vs BigInt)'
 date: 2023-10-11
 categories:
-  - memo
+  - coding-tests
 tags:
   - JavaScript
 ---

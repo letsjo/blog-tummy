@@ -2,7 +2,7 @@
 title: '[백준 20058번] 마법사 상어와 파이어스톰 / JavaScript'
 date: 2023-10-13
 categories:
-  - memo
+  - coding-tests
 tags:
   - 코딩테스트
 ---

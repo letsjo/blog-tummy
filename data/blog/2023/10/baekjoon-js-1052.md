@@ -2,7 +2,7 @@
 title: '[백준 1052번] 물병 / JavaScript'
 date: 2023-10-11
 categories:
-  - memo
+  - coding-tests
 tags:
   - 코딩테스트
 ---

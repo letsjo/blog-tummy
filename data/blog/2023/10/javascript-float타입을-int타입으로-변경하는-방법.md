@@ -2,7 +2,7 @@
 title: '[javascript] float타입을 int타입으로 변경하는 여러가지 방법 (소수점 버림)'
 date: 2023-10-08
 categories:
-  - memo
+  - coding-tests
 tags:
   - JavaScript
 ---

@@ -2,7 +2,7 @@
 title: '[백준 16234번] 인구 이동 / JavaScript'
 date: 2023-10-08
 categories:
-  - memo
+  - coding-tests
 tags:
   - 코딩테스트
 ---

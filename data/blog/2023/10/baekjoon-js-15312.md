@@ -2,7 +2,7 @@
 title: '[백준 15312번] 이름 궁합 / JavaScript'
 date: 2023-10-09
 categories:
-  - memo
+  - coding-tests
 tags:
   - 코딩테스트
 ---

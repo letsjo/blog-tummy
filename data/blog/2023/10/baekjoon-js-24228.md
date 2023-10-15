@@ -2,7 +2,7 @@
 title: '[백준 24228번] 젓가락 / JavaScript'
 date: 2023-10-11
 categories:
-  - memo
+  - coding-tests
 tags:
   - 코딩테스트
 ---
