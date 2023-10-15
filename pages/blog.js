@@ -13,7 +13,7 @@ export async function getServerSideProps(context) {
   const { tag } = context.query;
   delete categories['coding-tests'];
   const sortedCategories = Object.keys(categories).sort((a, b) => categories[b] - categories[a]);
-  const allPostsWithoutCodingTest = allPosts.filter((v) => v.categories?.indexOf('coding-tests') == -1);
+  const allPostsWithoutCodingTest = allPosts.filter((v) => v.categories?.indexOf('Coding Tests') == -1);
   const posts = tag
     ? allPostsWithoutCodingTest.filter((post) => post.tags?.map((t) => kebabCase(t)).includes(tag))
     : allPostsWithoutCodingTest;

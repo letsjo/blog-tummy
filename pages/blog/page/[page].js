@@ -14,7 +14,7 @@ export async function getServerSideProps(context) {
   const categories = await getAllCategories('blog');
   delete categories['coding-tests'];
   const sortedCategories = Object.keys(categories).sort((a, b) => categories[b] - categories[a]);
-  const allPostsWithoutCodingTests = allPosts.filter((v) => v.categories?.indexOf('coding-tests') == -1);
+  const allPostsWithoutCodingTests = allPosts.filter((v) => v.categories?.indexOf('Coding Tests') == -1);
   const posts = tag
     ? allPostsWithoutCodingTests.filter((post) => post.tags?.map((t) => kebabCase(t)).includes(tag))
     : allPostsWithoutCodingTests;
