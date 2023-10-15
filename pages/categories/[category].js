@@ -28,7 +28,9 @@ export async function getStaticProps({ params }) {
   const posts = allPosts.filter(
     (post) => post.draft !== true && post.categories?.map((t) => kebabCase(t)).includes(params.category),
   );
-  const tags = [...new Set(posts.flatMap((post) => post.tags))].filter((v) => v !== null);
+  const tags = [...new Set(posts.flatMap((post) => post.tags))]
+    .filter((v) => v !== null)
+    .sort((a, b) => a.localeCompare(b));
 
   return { props: { posts, category: params.category, sortedCategories, tags } };
 }
