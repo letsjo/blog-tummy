@@ -1,9 +1,10 @@
 ---
-title: 실시간 동시편집 OT vs CRDT
+title: 실시간 동시 편집 OT vs CRDT
 date: 2023-10-15
 categories:
   - Study
 tags:
+  - 자료구조
 ---
 
 # 실시간 동시 편집
